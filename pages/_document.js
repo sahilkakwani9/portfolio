@@ -4,7 +4,7 @@ export default function Document() {
   const meta = {
     title: '0xsarthak',
     description: '0xsarthak',
-    image: 'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png'
+    image: '/favicon.ico'
   }
 
   return (
