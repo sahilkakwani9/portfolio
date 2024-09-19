@@ -6,7 +6,7 @@ export const DATA = {
   initials: "SS",
   url: "https://www.0xsarthak.xyz/",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "I Code.",
   summary:
     `gm, I'm Sarthak
 
