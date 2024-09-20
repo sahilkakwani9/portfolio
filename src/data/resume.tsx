@@ -138,7 +138,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
     },
     {
       title: "Foundry Stablecoin",
-      href: "https://github.com/magicuidesign/magicui",
+      href: "https://github.com/Not-Sarthak/defi-stablecoin",
       dates: "August 2024",
       active: true,
       description:
@@ -152,7 +152,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
       links: [
         {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/Not-Sarthak/defi-stablecoin",
           icon: <Icons.github className="size-3" />,
         },
       ],
