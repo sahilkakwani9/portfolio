@@ -12,12 +12,12 @@ export const DATA = {
 
 I'm a full-stack developer with an experience of working with various languages and blockchains.
 
-Previously, I’ve interned at 2x early-stage startups and have won 7x hackathons🏆. I enjoy contributing to open source projects and currently am a contributor at @0rbit💫.
+Previously, I’ve interned at 3x early-stage startups and have won 19x hackathons🏆. I enjoy contributing to open source projects. I'm also a member at FBI (@callusfbi).
 
 Beyond code, I’m passionate about cinematography and am stepping out of my comfort zone to create both technical and non-technical content. I’m a sneakerhead, love traveling, and enjoy endless talks on finance. Also, I play chess.
 `
   ,
-  avatarUrl: "/me.png",
+  avatarUrl: "/me.jpg",
   skills: [
     "React",
     "Next.js",
