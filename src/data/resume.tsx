@@ -79,7 +79,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
       title: "Full Stack Developer Intern",
       logoUrl: "/0rbit.jpg",
       start: "March 2024",
-      end: "Present",
+      end: "December 2024",
       description: "Developed multiple smart contracts in Lua for the AO Ecosystem, while battle-testing 0rbit’s core infrastructure and contributing to the core node. I also integrated frontend tutorials using AOConnect, showcasing 0rbit's capabilities in blog posts. Beyond code, I enhanced the documentation, converted Figma designs into functional UI components, and contributed to the website development. Additionally, I handled social media content and authored blogs and technical documentation, ensuring a better developer experience."
     },
     {
