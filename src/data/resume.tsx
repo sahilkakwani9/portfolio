@@ -115,7 +115,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
       dates: "September 2024",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+        "Create Solana sites at warp speed with our reusable, style-ready components—purely OPOS magic!",
       technologies: [
         "Next.js",
         "Typescript",
@@ -133,6 +133,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
           icon: <Icons.github className="size-3" />,
         },
       ],
+      category: "Frontend",
       image: "",
       video: "/projects/solui.mp4",
     },
@@ -156,6 +157,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
           icon: <Icons.github className="size-3" />,
         },
       ],
+      category: "Smart-Contract",
       image: "",
       video: "/projects/stablecoin.mp4",
     },
@@ -178,6 +180,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
           icon: <Icons.github className="size-3" />,
         },
       ],
+      category: "Smart-Contract",
       image: "/projects/merkle.png",
       video:
         "",
@@ -208,6 +211,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
           icon: <Icons.github className="size-3" />,
         },
       ],
+      category: "Frontend",
       image: "",
       video:
         "/projects/ao-calculator.mp4",
@@ -237,6 +241,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
           icon: <Icons.github className="size-3" />,
         },
       ],
+      category: "Frontend",
       image: "/projects/ethmumbai.png",
       video:
         "",
@@ -267,6 +272,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
           icon: <Icons.github className="size-3" />,
         },
       ],
+      category: "Hackathon",
       image: "/projects/basewave.svg",
       video: "",
     },
@@ -295,6 +301,7 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
           icon: <Icons.github className="size-3" />,
         },
       ],
+      category: "Hackathon",
       image: "/projects/fuelcaster.png",
       video: "",
     },
@@ -323,41 +330,9 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
           icon: <Icons.github className="size-3" />,
         },
       ],
+      category: "Hackathon",
       image: "/projects/quill.png",
       video: "",
     },
   ],
-  // hackathons: [
-  //   {
-  //     title: "Make School's Student App Competition 2017",
-  //     dates: "May 19th - 21st, 2017",
-  //     location: "International",
-  //     description: "Improved PocketDoc and submitted to online competition",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/make-school-hackathon.png",
-  //     win: "Top 10 Finalist | Honourable Mention",
-  //     links: [
-  //       {
-  //         title: "Medium Article",
-  //         icon: <Icons.globe className="h-4 w-4" />,
-  //         href: "https://medium.com/make-school/the-winners-of-make-schools-student-app-competition-2017-a6b0e72f190a",
-  //       },
-  //       {
-  //         title: "Devpost",
-  //         icon: <Icons.globe className="h-4 w-4" />,
-  //         href: "https://devpost.com/software/pocketdoc-react-native",
-  //       },
-  //       {
-  //         title: "YouTube",
-  //         icon: <Icons.youtube className="h-4 w-4" />,
-  //         href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-  //       },
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "",
-  //       },
-  //     ],
-    // },
-  // ],
 } as const;
