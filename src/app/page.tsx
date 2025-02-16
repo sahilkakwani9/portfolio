@@ -60,7 +60,7 @@ export default function Page() {
             <div className="mt-4">
               I've won{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
-                19x hackathons
+                20x hackathons
               </span>{" "}
               and enjoy{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
