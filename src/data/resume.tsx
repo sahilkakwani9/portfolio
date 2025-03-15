@@ -165,6 +165,16 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
             },
           ],
         },
+        "SendAI Dashboard": {
+          id: 4,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/sendai-dashboard",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
       },
       Backend: {},
       "Full Stack": {},
@@ -195,8 +205,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         },
         "DAO - Foundry": {
           id: 2,
-          description:
-            "On-chain voting system for DAOs",
+          description: "On-chain voting system for DAOs",
           links: [
             {
               type: "Source",
@@ -207,8 +216,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         },
         "ERC - 4337 / Foundry": {
           id: 2,
-          description:
-            "A project to learn Account Abstraction using EIP-4337",
+          description: "A project to learn Account Abstraction using EIP-4337",
           links: [
             {
               type: "Source",
@@ -295,19 +303,19 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
   },
   books: [
     {
-      title: "Think and Grow Rich - Napoleon Hill"
+      title: "Think and Grow Rich - Napoleon Hill",
     },
     {
-      title: "Before you Start Up - Pankaj Goyal"
+      title: "Before you Start Up - Pankaj Goyal",
     },
     {
-      title: "Zero to One - Peter Thiel"
+      title: "Zero to One - Peter Thiel",
     },
     {
-      title: "The 5 AM Club - Robin Sharma"
+      title: "The 5 AM Club - Robin Sharma",
     },
     {
-      title: "The Network State - Balaji Srinivasan"
-    }
+      title: "The Network State - Balaji Srinivasan",
+    },
   ],
 } as const;
