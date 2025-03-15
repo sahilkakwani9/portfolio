@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { TextEffect } from "@/components/text/text-effect";
-import { DATA } from "@/data/resume";
 
 function TextEffectWithExit() {
   const [trigger, setTrigger] = useState(true);

@@ -1,21 +1,45 @@
 "use client";
 
 import BlurFade from "@/components/text/blur-fade";
-import { ResumeCard } from "@/components/resume-card";
+import { ResumeCard } from "@/components/cards/resume-card";
 import { DATA } from "@/data/resume";
-import { RoughNotation } from "react-rough-notation";
-import VideoPlayer from "@/components/video";
+import VideoPlayer from "@/components/ui/video";
 import TextEffectWithExit from "@/components/headline";
-import { Badge } from "@/components/ui/badge";
-import { GradientTracing } from "@/components/gradient-tracing";
+import { ProjectCard } from "@/components/cards/project-card";
+import { ProjectTabs } from "@/components/project-tabs";
+import { useState } from "react";
+import { HackathonCard } from "@/components/cards/hackathon-card";
+import { Footer } from "@/components/footer";
+import { CommandPalette } from "@/components/command-palette";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  const projectCategories = Object.keys(DATA.projects[0]);
+  const [activeProjectTab, setActiveProjectTab] = useState<string>(
+    projectCategories[0]
+  );
+  const workCategories = ["Work", "Open Source"];
+  const [activeWorkTab, setActiveWorkTab] = useState<string>(workCategories[0]);
+
+  const getProjectsForTab = (tab: string) => {
+    const projects = DATA.projects[0];
+    return (projects as Record<string, Record<string, any>>)[tab] || {};
+  };
+
+  const getWorkForTab = (tab: string) => {
+    if (tab === "Work") {
+      return DATA.work;
+    } else if (tab === "Open Source") {
+      return DATA.openSource;
+    }
+    return [];
+  };
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
+        <div className="mx-auto w-full max-w-2xl space-y-2">
           <div className="flex-col flex flex-1 justify-center items-center space-y-1.5">
             <BlurFade
               delay={BLUR_FADE_DELAY}
@@ -26,6 +50,14 @@ export default function Page() {
               </div>
             </BlurFade>
           </div>
+          <BlurFade
+            delay={BLUR_FADE_DELAY * 2}
+            className="flex justify-end gap-3 pb-4"
+          >
+            <span className="text-muted-foreground font-light tracking-wide text-sm italic opacity-80 hover:opacity-100 transition-opacity duration-300">
+              — developer
+            </span>
+          </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY}>
             <VideoPlayer src="/sarthak-pfp.mp4" />
           </BlurFade>
@@ -45,13 +77,13 @@ export default function Page() {
             <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
               full-stack developer
             </span>{" "}
-            with an experience of working with various{" "}
+            with experience working with various{" "}
             <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
               languages, protocols, and blockchains
             </span>
             .
             <div className="mt-4">
-              Previously, I’ve interned at{" "}
+              Previously, I've interned at{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
                 3x early-stage startups
               </span>
@@ -60,42 +92,93 @@ export default function Page() {
             <div className="mt-4">
               I've won{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
-                20x hackathons
+                ~20 hackathons
               </span>{" "}
               and enjoy{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
                 contributing
               </span>{" "}
-              to open source projects. I'm also a contributor at{" "}
+              to open source projects. I'm a contributor at{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
                 SuperteamIn
-              </span>{" "}
-              and a member at{" "}
+              </span>
+              , a member of{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
                 FBI
               </span>{" "}
-              (@callusfbi).
+              (@callusfbi), a{" "}
+              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                Wormhole Fellow
+              </span>{" "}
+              and resident at{" "}
+              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                Network School
+              </span>
+              .
+            </div>
+            <div className="mt-4">
+              Think of this as my brain dump as I try to make sense of the world.
+            </div>
+            <div className="mt-6 flex justify-center">
+              <CommandPalette />
             </div>
           </div>
         </BlurFade>
       </section>
       <section id="projects">
-        <div className="space-y-12 w-full py-6">
+        <div className="space-y-8 w-full py-6">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Builds
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   I&apos;ve worked on a variety of projects, from{" "}
-                  <b className="mr-1 dark:text-white text-black">frontend</b>
-                  to <b className="dark:text-white text-black">backend</b> and
-                  even{" "}
-                  <b className="dark:text-white text-black">smart contracts</b>.
+                  <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                    frontend
+                  </span>{" "}
+                  to{" "}
+                  <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                    backend
+                  </span>{" "}
+                  and even{" "}
+                  <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                    smart contracts
+                  </span>
+                  . <br />
                   Here are a few of my favorites.
                 </p>
               </div>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <ProjectTabs
+              tabs={projectCategories}
+              activeTab={activeProjectTab}
+              onTabChange={setActiveProjectTab}
+            />
+
+            <div className="mt-4 space-y-1 border-t border-border/40">
+              {Object.keys(getProjectsForTab(activeProjectTab)).length > 0 ? (
+                Object.entries(getProjectsForTab(activeProjectTab)).map(
+                  ([projectName, projectData], index) => (
+                    <ProjectCard
+                      key={`${activeProjectTab}-${projectName}`}
+                      tag={activeProjectTab}
+                      title={projectName}
+                      links={projectData.links || []}
+                      description={projectData.description}
+                      className={index !== 0 ? "border-t border-border/40" : ""}
+                    />
+                  )
+                )
+              ) : (
+                <div className="py-8 text-center text-muted-foreground text-sm italic">
+                  No projects in this category yet. Check back soon!
+                </div>
+              )}
             </div>
           </BlurFade>
         </div>
@@ -107,73 +190,97 @@ export default function Page() {
               Work Experience
             </div>
           </BlurFade>
-          <div className="pt-6 flex flex-col gap-y-4">
-            {DATA.work.map((work, id) => (
-              <BlurFade
-                key={work.company}
-                delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-                className=""
-              >
-                <ResumeCard
-                  key={work.company}
-                  logoUrl={work.logoUrl}
-                  altText={work.company}
-                  title={work.company}
-                  subtitle={work.title}
-                  href={work.href}
-                  badges={work.badges}
-                  period={`${work.start} - ${work.end ?? "Present"}`}
-                  description={work.description}
-                />
-              </BlurFade>
-            ))}
+
+          <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
+            <ProjectTabs
+              tabs={workCategories}
+              activeTab={activeWorkTab}
+              onTabChange={setActiveWorkTab}
+              className="mt-4"
+            />
+          </BlurFade>
+
+          <div className="flex flex-col gap-y-4 border-t border-border/40 w-full">
+            {getWorkForTab(activeWorkTab).length > 0 ? (
+              getWorkForTab(activeWorkTab).map((item: any, id: number) => (
+                <BlurFade
+                  key={item.company}
+                  delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+                >
+                  <ResumeCard
+                    key={item.company}
+                    logoUrl={item.logoUrl || "/placeholder-logo.png"}
+                    altText={item.company}
+                    title={item.company}
+                    subtitle={item.title}
+                    href={item.href}
+                    period={
+                      activeWorkTab === "Work" && item.start && item.end
+                        ? `${item.start} - ${item.end || "Present"}`
+                        : activeWorkTab === "Open Source"
+                        ? ""
+                        : ""
+                    }
+                    description={item.description}
+                    prLinks={
+                      activeWorkTab === "Open Source" ? item.prLinks : undefined
+                    }
+                    isOpenSource={activeWorkTab === "Open Source"}
+                  />
+                </BlurFade>
+              ))
+            ) : (
+              <div className="py-8 text-center text-muted-foreground text-sm italic">
+                No {activeWorkTab.toLowerCase()} experience to show yet. Check
+                back soon!
+              </div>
+            )}
           </div>
         </div>
       </section>
-      <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
-            <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Contact
-              </div>
-              <p className="mx-auto max-w-[600px] text-muted-foreground">
-                I'm always open to freelance work. If you're interested, feel
-                free to{" "}
-                <RoughNotation
-                  type="highlight"
-                  show={true}
-                  strokeWidth={3}
-                  animationDuration={400}
-                  animationDelay={1000}
-                  color="rgb(253 224 71 / 1)"
-                >
-                  <a
-                    href="mailto:notsarthakshah@gmail.com"
-                    className="text-black hover:underline"
-                  >
-                    email
-                  </a>{" "}
-                  /
-                  <a
-                    href="https://x.com/0xSarthak13"
-                    target="_blank"
-                    className="text-black hover:underline"
-                  >
-                    dm
-                  </a>
-                </RoughNotation>{" "}
-                me.
-              </p>
-              <GradientTracing
-                width={200}
-                height={200}
-                path="M100,0 L75,75 L125,75 L50,200 L100,100 L50,100 L100,0"
-                gradientColors={["#F1C40F", "#F1C40F", "#E67E22"]}
-              />
+
+      <section id="wins" className="pt-20">
+        <div className="flex min-h-0 flex-col justify-center items-center gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <div className="justify-center flex w-32 rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+              Wins
             </div>
           </BlurFade>
+
+          <BlurFade delay={BLUR_FADE_DELAY * 13.5}>
+            <p className="text-muted-foreground text-sm text-center mt-2">
+              Achievements and recognitions I've received along the way.
+            </p>
+          </BlurFade>
+
+          <div className="pt-4 flex flex-col gap-y-2 border-t border-border/40 w-full">
+            {Object.entries(DATA.wins)
+              .slice(0, 5)
+              .map(([title, data], id) => (
+                <BlurFade key={title} delay={BLUR_FADE_DELAY * 14 + id * 0.05}>
+                  <HackathonCard
+                    key={title}
+                    title={title}
+                    href={data.link || "#"}
+                  />
+                </BlurFade>
+              ))}
+
+            <BlurFade delay={BLUR_FADE_DELAY * 15}>
+              <div className="flex relative justify-center mt-4">
+                <a
+                  href="/wins"
+                  className="inline-flex z-10 items-center justify-center rounded-md bg-[#b0e721] px-2 py-1 text-sm font-medium text-background shadow transition-colors hover:bg-[#b0e721]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                >
+                  View All Wins
+                </a>
+              </div>
+            </BlurFade>
+          </div>
         </div>
+      </section>
+      <section id="footer" className="pt-20">
+        <Footer />
       </section>
     </main>
   );

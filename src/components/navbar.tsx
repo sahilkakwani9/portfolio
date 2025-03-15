@@ -24,7 +24,8 @@ export default function Navbar() {
                   href={item.href}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
+                    "size-12",
+                    "hover:bg-foreground/10"
                   )}
                 >
                   <item.icon className="size-4" />
