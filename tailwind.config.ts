@@ -29,6 +29,7 @@ const config = {
 					"Times",
 					"serif",
 				],
+        pacifico: ['Pacifico', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",

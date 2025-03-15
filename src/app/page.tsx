@@ -1,57 +1,66 @@
 "use client";
-import { HackathonCard } from "@/components/hackathon-card";
-import BlurFade from "@/components/magicui/blur-fade";
-import { ProjectCard } from "@/components/project-card";
-import { ResumeCard } from "@/components/resume-card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
+
+import BlurFade from "@/components/text/blur-fade";
+import { ResumeCard } from "@/components/cards/resume-card";
 import { DATA } from "@/data/resume";
-import Link from "next/link";
-import Markdown from "react-markdown";
-import { useState } from 'react';
-import { RoughNotation } from "react-rough-notation";
+import VideoPlayer from "@/components/ui/video";
+import TextEffectWithExit from "@/components/headline";
+import { ProjectCard } from "@/components/cards/project-card";
+import { ProjectTabs } from "@/components/project-tabs";
+import { useState } from "react";
+import { HackathonCard } from "@/components/cards/hackathon-card";
+import { Footer } from "@/components/footer";
+import { CommandPalette } from "@/components/command-palette";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  const projectCategories = Object.keys(DATA.projects[0]);
+  const [activeProjectTab, setActiveProjectTab] = useState<string>(
+    projectCategories[0]
+  );
+  const workCategories = ["Work", "Open Source"];
+  const [activeWorkTab, setActiveWorkTab] = useState<string>(workCategories[0]);
 
-  const [showAll, setShowAll] = useState(false);
+  const getProjectsForTab = (tab: string) => {
+    const projects = DATA.projects[0];
+    return (projects as Record<string, Record<string, any>>)[tab] || {};
+  };
 
-  const VISIBLE_PROJECTS = 4;
-
-  const handleToggle = () => {
-    setShowAll(!showAll);
+  const getWorkForTab = (tab: string) => {
+    if (tab === "Work") {
+      return DATA.work;
+    } else if (tab === "Open Source") {
+      return DATA.openSource;
+    }
+    return [];
   };
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-center">
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
-            </BlurFade>
-          </div>
+        <div className="mx-auto w-full max-w-2xl space-y-2">
           <div className="flex-col flex flex-1 justify-center items-center space-y-1.5">
-            <BlurFade delay={BLUR_FADE_DELAY} className="text-3xl tracking-tighter sm:text-5xl xl:text-6xl/none flex items-center gap-3">
-              <div className="font-serif italic main-text-in">I'm</div>
-              <RoughNotation
-                type="box"
-                show={true}
-                strokeWidth={3}
-                animationDuration={400}
-                animationDelay={1000}
-                color="rgb(253 224 71 / 1)"
-              >
-                <span className="font-serif italic main-text-in">
-                  {DATA.name.split(" ")[0]}
-                </span>
-              </RoughNotation>
+            <BlurFade
+              delay={BLUR_FADE_DELAY}
+              className="text-3xl tracking-tighter sm:text-5xl xl:text-6xl/none flex items-center gap-3"
+            >
+              <div className="font-serif italic main-text-in">
+                <TextEffectWithExit />
+              </div>
             </BlurFade>
           </div>
+          <BlurFade
+            delay={BLUR_FADE_DELAY * 2}
+            className="flex justify-end gap-3 pb-4"
+          >
+            <span className="text-muted-foreground font-light tracking-wide text-sm italic opacity-80 hover:opacity-100 transition-opacity duration-300">
+              — developer
+            </span>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY}>
+            <VideoPlayer src="/sarthak-pfp.mp4" />
+          </BlurFade>
         </div>
       </section>
       <section id="about">
@@ -63,177 +72,215 @@ export default function Page() {
           </BlurFade>
         </div>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-md text-muted-foreground dark:prose-invert">
-            {DATA.summary}
-          </Markdown>
+          <div className="prose max-w-full text-pretty font-sans text-md text-muted-foreground dark:prose-invert leading-[1.5]">
+            I'm a{" "}
+            <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+              full-stack developer
+            </span>{" "}
+            with experience working with various{" "}
+            <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+              languages, protocols, and blockchains
+            </span>
+            .
+            <div className="mt-4">
+              Previously, I've interned at{" "}
+              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                3x early-stage startups
+              </span>
+              .
+            </div>
+            <div className="mt-4">
+              I've won{" "}
+              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                ~20 hackathons
+              </span>{" "}
+              and enjoy{" "}
+              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                contributing
+              </span>{" "}
+              to open source projects. I'm a contributor at{" "}
+              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                SuperteamIn
+              </span>
+              , a member of{" "}
+              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                FBI
+              </span>{" "}
+              (@callusfbi), a{" "}
+              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                Wormhole Fellow
+              </span>{" "}
+              and resident at{" "}
+              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                Network School
+              </span>
+              .
+            </div>
+            <div className="mt-4">
+              Think of this as my brain dump as I try to make sense of the world.
+            </div>
+            <div className="mt-6 flex justify-center">
+              <CommandPalette />
+            </div>
+          </div>
         </BlurFade>
       </section>
       <section id="projects">
-        <div className="space-y-12 w-full py-12">
+        <div className="space-y-8 w-full py-6">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
+                  Builds
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Recent Work
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from <b className="mr-1 dark:text-white text-black">frontend</b>
-                  to <b className="dark:text-white text-black">backend</b> and even <b className="dark:text-white text-black">smart contracts</b>. Here are a few of my
-                  favorites.
+                <p className="text-muted-foreground text-sm">
+                  I&apos;ve worked on a variety of projects, from{" "}
+                  <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                    frontend
+                  </span>{" "}
+                  to{" "}
+                  <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                    backend
+                  </span>{" "}
+                  and even{" "}
+                  <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+                    smart contracts
+                  </span>
+                  . <br />
+                  Here are a few of my favorites.
                 </p>
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.slice(0, showAll ? DATA.projects.length : VISIBLE_PROJECTS).map((project, id) => (
-              <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              </BlurFade>
-            ))}
-          </div>
-          <div className="flex justify-center mt-4">
-            <button onClick={handleToggle} className="px-4 py-2 text-white dark:text-black">
-              {showAll ?
-                <div className="text-sm bg-black dark:bg-white flex items-center gap-2 rounded-md px-2 py-0.5 hover:scale-95 transition-all">
-                  Show Less
-                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.14645 2.14645C7.34171 1.95118 7.65829 1.95118 7.85355 2.14645L11.8536 6.14645C12.0488 6.34171 12.0488 6.65829 11.8536 6.85355C11.6583 7.04882 11.3417 7.04882 11.1464 6.85355L8 3.70711L8 12.5C8 12.7761 7.77614 13 7.5 13C7.22386 13 7 12.7761 7 12.5L7 3.70711L3.85355 6.85355C3.65829 7.04882 3.34171 7.04882 3.14645 6.85355C2.95118 6.65829 2.95118 6.34171 3.14645 6.14645L7.14645 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                </div> :
-                <div className="text-sm bg-black dark:bg-white flex items-center gap-2 rounded-md px-2 py-0.5 hover:scale-95 transition-all">
-                  Show More
-                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 2C7.77614 2 8 2.22386 8 2.5L8 11.2929L11.1464 8.14645C11.3417 7.95118 11.6583 7.95118 11.8536 8.14645C12.0488 8.34171 12.0488 8.65829 11.8536 8.85355L7.85355 12.8536C7.75979 12.9473 7.63261 13 7.5 13C7.36739 13 7.24021 12.9473 7.14645 12.8536L3.14645 8.85355C2.95118 8.65829 2.95118 8.34171 3.14645 8.14645C3.34171 7.95118 3.65829 7.95118 3.85355 8.14645L7 11.2929L7 2.5C7 2.22386 7.22386 2 7.5 2Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                </div>}
-            </button>
-          </div>
+
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <ProjectTabs
+              tabs={projectCategories}
+              activeTab={activeProjectTab}
+              onTabChange={setActiveProjectTab}
+            />
+
+            <div className="mt-4 space-y-1 border-t border-border/40">
+              {Object.keys(getProjectsForTab(activeProjectTab)).length > 0 ? (
+                Object.entries(getProjectsForTab(activeProjectTab)).map(
+                  ([projectName, projectData], index) => (
+                    <ProjectCard
+                      key={`${activeProjectTab}-${projectName}`}
+                      tag={activeProjectTab}
+                      title={projectName}
+                      links={projectData.links || []}
+                      description={projectData.description}
+                      className={index !== 0 ? "border-t border-border/40" : ""}
+                    />
+                  )
+                )
+              ) : (
+                <div className="py-8 text-center text-muted-foreground text-sm italic">
+                  No projects in this category yet. Check back soon!
+                </div>
+              )}
+            </div>
+          </BlurFade>
         </div>
       </section>
-      <section id="work">
+      <section id="work" className="pt-20">
         <div className="flex min-h-0 flex-col justify-center items-center gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <div className="justify-center flex w-42 rounded-lg bg-foreground text-background px-3 py-1 text-sm">
               Work Experience
             </div>
           </BlurFade>
-          {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-            >
-              <ResumeCard
-                key={work.company}
-                logoUrl={work.logoUrl}
-                altText={work.company}
-                title={work.company}
-                subtitle={work.title}
-                href={work.href}
-                badges={work.badges}
-                period={`${work.start} - ${work.end ?? "Present"}`}
-                description={work.description}
-              />
-            </BlurFade>
-          ))}
-        </div>
-      </section>
-      {/* <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
+
+          <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
+            <ProjectTabs
+              tabs={workCategories}
+              activeTab={activeWorkTab}
+              onTabChange={setActiveWorkTab}
+              className="mt-4"
+            />
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
+
+          <div className="flex flex-col gap-y-4 border-t border-border/40 w-full">
+            {getWorkForTab(activeWorkTab).length > 0 ? (
+              getWorkForTab(activeWorkTab).map((item: any, id: number) => (
+                <BlurFade
+                  key={item.company}
+                  delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+                >
+                  <ResumeCard
+                    key={item.company}
+                    logoUrl={item.logoUrl || "/placeholder-logo.png"}
+                    altText={item.company}
+                    title={item.company}
+                    subtitle={item.title}
+                    href={item.href}
+                    period={
+                      activeWorkTab === "Work" && item.start && item.end
+                        ? `${item.start} - ${item.end || "Present"}`
+                        : activeWorkTab === "Open Source"
+                        ? ""
+                        : ""
+                    }
+                    description={item.description}
+                    prLinks={
+                      activeWorkTab === "Open Source" ? item.prLinks : undefined
+                    }
+                    isOpenSource={activeWorkTab === "Open Source"}
+                  />
+                </BlurFade>
+              ))
+            ) : (
+              <div className="py-8 text-center text-muted-foreground text-sm italic">
+                No {activeWorkTab.toLowerCase()} experience to show yet. Check
+                back soon!
+              </div>
+            )}
           </div>
         </div>
-      </section> */}
-      {/* <section id="hackathons">
-        <div className="space-y-12 w-full py-12">
+      </section>
+
+      <section id="wins" className="pt-20">
+        <div className="flex min-h-0 flex-col justify-center items-center gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Wins
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Weird Flex, but Ok
-                </h2>
-              </div>
+            <div className="justify-center flex w-32 rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+              Wins
             </div>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4">
-              {DATA.hackathons.map((project, id) => (
-                <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-                >
+
+          <BlurFade delay={BLUR_FADE_DELAY * 13.5}>
+            <p className="text-muted-foreground text-sm text-center mt-2">
+              Achievements and recognitions I've received along the way.
+            </p>
+          </BlurFade>
+
+          <div className="pt-4 flex flex-col gap-y-2 border-t border-border/40 w-full">
+            {Object.entries(DATA.wins)
+              .slice(0, 5)
+              .map(([title, data], id) => (
+                <BlurFade key={title} delay={BLUR_FADE_DELAY * 14 + id * 0.05}>
                   <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
+                    key={title}
+                    title={title}
+                    href={data.link || "#"}
                   />
                 </BlurFade>
               ))}
-            </ul>
-          </BlurFade>
-        </div>
-      </section> */}
-      <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
-            <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Contact
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in Touch
-              </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I'm always open to freelance work. If you're interested, feel free to {" "}
-                <RoughNotation
-                  type="highlight"
-                  show={true}
-                  strokeWidth={3}
-                  animationDuration={400}
-                  animationDelay={1000}
-                  color="rgb(253 224 71 / 1)"
+
+            <BlurFade delay={BLUR_FADE_DELAY * 15}>
+              <div className="flex relative justify-center mt-4">
+                <a
+                  href="/wins"
+                  className="inline-flex z-10 items-center justify-center rounded-md bg-[#b0e721] px-2 py-1 text-sm font-medium text-background shadow transition-colors hover:bg-[#b0e721]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                 >
-                  <Link
-                    href="mail.to@notsarthakshah@gmail.com"
-                    className="text-black hover:underline"
-                  >
-                    email
-                  </Link>
-                  {" "} /
-                  <Link
-                    href="mail.to@notsarthakshah@gmail.com"
-                    className="text-black hover:underline"
-                  >
-                    dm
-                  </Link>
-                </RoughNotation>
-                {" "} me.
-              </p>
-            </div>
-          </BlurFade>
+                  View All Wins
+                </a>
+              </div>
+            </BlurFade>
+          </div>
         </div>
+      </section>
+      <section id="footer" className="pt-20">
+        <Footer />
       </section>
     </main>
   );

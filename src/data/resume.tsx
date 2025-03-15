@@ -1,35 +1,26 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { Book, HomeIcon, NotebookIcon, TrophyIcon } from "lucide-react";
+import { GithubIcon } from "../../public/icons/github";
+import { LinkIcon } from "../../public/icons/link";
 
 export const DATA = {
   name: "Sarthak Shah",
   initials: "SS",
   url: "https://www.0xsarthak.xyz/",
-  description:
-    "I Code.",
-  summary:
-    `gm, I'm Sarthak
-
+  description: "I Code.",
+  summary: `
 I'm a full-stack developer with an experience of working with various languages and blockchains.
 
-Previously, I’ve interned at 3x early-stage startups and have won 19x hackathons🏆. I enjoy contributing to open source projects. I'm also a member at FBI (@callusfbi).
+Previously, I've interned at 3x early-stage startups and have won 20x hackathons🏆. I enjoy contributing to open source projects. I'm also a member at FBI (@callusfbi) and contributor at SuperteamIn (@superteamIn).
 
-Beyond code, I’m passionate about cinematography and am stepping out of my comfort zone to create both technical and non-technical content. I’m a sneakerhead, love traveling, and enjoy endless talks on finance. Also, I play chess.
-`
-  ,
+Beyond code, I'm passionate about cinematography and am stepping out of my comfort zone to create both technical and non-technical content. I'm a sneakerhead, love traveling, and enjoy endless talks on finance. Also, I play chess.
+`,
   avatarUrl: "/me.jpg",
-  skills: [
-    "React",
-    "Next.js",
-    "Typescript",
-    "Node.js",
-    "Rust",
-    "Solidity",
-    "Databases",
-  ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/wins", icon: TrophyIcon, label: "Wins" },
+    { href: "/bookshelf", icon: Book, label: "Bookshelf" },
   ],
   contact: {
     email: "notsarthakshah@gmail.com",
@@ -56,8 +47,8 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
         navbar: true,
       },
       gm: {
-        name: "Work",
-        url: "",
+        name: "Wins",
+        url: "/wins",
         icon: Icons.work,
         navbar: true,
       },
@@ -69,26 +60,35 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
       },
     },
   },
-
   work: [
+    {
+      company: "Gasyard",
+      href: "https://gasyard.fi/",
+      location: "Remote",
+      title: "Full Stack Developer",
+      logoUrl: "/work/gasyard.png",
+      start: "January 2025",
+      end: "Current",
+      description:
+        "Implemented multiple cross-chain bridge routes, including Hyperliquid,  Movement, Monad (Testnet), and other EVM/Non-EVM integrations for both Testnet and Mainnet environments. Built the Gasyard Bridge Explorer using Next.js, TypeScript, Tanstack Query, Zustand, and Tailwind CSS, providing an interface for transaction tracking. Developed Fuelbae Agent, a powerful tool that enables users to execute complex DeFi actions seamlessly across various protocols.",
+    },
     {
       company: "0rbit",
       href: "https://www.0rbit.co/",
-      badges: [],
       location: "Remote",
       title: "Full Stack Developer Intern",
-      logoUrl: "/0rbit.jpg",
+      logoUrl: "/work/0rbit.jpg",
       start: "March 2024",
       end: "December 2024",
-      description: "Developed multiple smart contracts in Lua for the AO Ecosystem, while battle-testing 0rbit’s core infrastructure and contributing to the core node. I also integrated frontend tutorials using AOConnect, showcasing 0rbit's capabilities in blog posts. Beyond code, I enhanced the documentation, converted Figma designs into functional UI components, and contributed to the website development. Additionally, I handled social media content and authored blogs and technical documentation, ensuring a better developer experience."
+      description:
+        "Developed multiple smart contracts in Lua for the AO Ecosystem, while battle-testing 0rbit's core infrastructure and contributing to the core node. I also integrated frontend tutorials using AOConnect, showcasing 0rbit's capabilities in blog posts. Beyond code, I enhanced the documentation, converted Figma designs into functional UI components, and contributed to the website development. Additionally, I handled social media content and authored blogs and technical documentation, ensuring a better developer experience.",
     },
     {
       company: "Pyano",
-      badges: [],
       href: "",
       location: "Remote",
       title: "Software Developer Intern (Part-Time)",
-      logoUrl: "/pyano.png",
+      logoUrl: "/work/pyano.png",
       start: "May 2024",
       end: "June 2024",
       description:
@@ -97,242 +97,217 @@ Beyond code, I’m passionate about cinematography and am stepping out of my com
     {
       company: "D2Clytics",
       href: "",
-      badges: [],
       location: "Remote",
       title: "Frontend Developer Intern",
-      logoUrl: "/d2clytics.jpg",
-      start: "January 2020",
-      end: "April 2020",
+      logoUrl: "/work/d2clytics.jpg",
+      start: "January 2024",
+      end: "April 2024",
       description:
         "Developed over 35 charts using various libraries with React.js and TailwindCSS. I led the end-to-end state management process and converted more than 30 pages Figma design into functional code.",
     },
   ],
-
+  openSource: [
+    {
+      company: "Send",
+      href: "https://www.thesendcoin.com/",
+      title: "Open Source Contributor",
+      logoUrl: "/work/send.png",
+      description:
+        "Built a dashboard for SendAI during the Send AI Hackathon, contributed to the website, and built backend [in Flask] and frontend [in Next.js] for a product named 'trAI'",
+      prLinks: [],
+    },
+  ],
   projects: [
     {
-      title: "Sol UI",
-      href: "https://sol-ui.vercel.app/",
-      dates: "September 2024",
-      active: true,
-      description:
-        "Create Solana sites at warp speed with our reusable, style-ready components—purely OPOS magic!",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "TailwindCSS",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://sol-ui.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
+      Frontend: {
+        "Sol UI": {
+          id: 1,
+          links: [
+            {
+              type: "Website",
+              href: "https://sol-ui.vercel.app/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/sol-ui",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
         },
-        {
-          type: "Source",
-          href: "https://github.com/Not-Sarthak/sol-ui",
-          icon: <Icons.github className="size-3" />,
+        "AO Calculator": {
+          id: 2,
+          links: [
+            {
+              type: "Website",
+              href: "https://ao-unit-converter.ar-io.net/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/ao-unit-converter",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
         },
-      ],
-      category: "Frontend",
-      image: "",
-      video: "/projects/solui.mp4",
+        EthMumbai: {
+          id: 3,
+          links: [
+            {
+              type: "Website",
+              href: "https://mumbaieth.vercel.app/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/eth-mumbai",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+      },
+      Backend: {},
+      "Full Stack": {},
+      "Smart Contracts": {
+        "Foundry Stablecoin": {
+          id: 1,
+          description:
+            "This project is meant to be a stablecoin where users can deposit WETH and WBTC in exchange for a token that will be pegged to the USD.",
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/defi-stablecoin",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Merkle Airdrop": {
+          id: 2,
+          description:
+            "An introduction to the Merkle Airdrop and Signatures project",
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/merkle-airdrop",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "DAO - Foundry": {
+          id: 2,
+          description:
+            "On-chain voting system for DAOs",
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/foundry-dao",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "ERC - 4337 / Foundry": {
+          id: 2,
+          description:
+            "A project to learn Account Abstraction using EIP-4337",
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/foundry-account-abstraction",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+      },
+    },
+  ],
+  wins: {
+    "Fellow @Wormhole India": {
+      link: "",
+      type: "title",
+    },
+    "Based Builder of the Year '24": {
+      link: "",
+      type: "title",
+    },
+    "Contributor @SuperteamIn": {
+      link: "",
+      type: "title",
+    },
+    "Player @callusfbi": {
+      link: "",
+      type: "title",
+    },
+    "ETHIndia '24 - Bounty Winner": {
+      link: "",
+      type: "hackathon",
+    },
+    "Onchain AI Fellowship - by @callusfbi - Selected": {
+      link: "",
+      type: "hackathon",
+    },
+    "EthBangkok '24 - Bounty Winner": {
+      link: "",
+      type: "hackathon",
+    },
+    "Encode Club BTC Hackathon - 2nd Place": {
+      link: "",
+      type: "hackathon",
+    },
+    "Funding the Commons '24 Bangkok - Bounty Winner": {
+      link: "",
+      type: "hackathon",
+    },
+    "Based India '24 - Winner List": {
+      link: "",
+    },
+    "Colosseum Radar Hackathon - 2x Bounties": {
+      link: "",
+      type: "hackathon",
+    },
+    "100xDevs Hackathon - Bounty": {
+      link: "",
+      type: "hackathon",
+    },
+    "Stellar Builders' Residency - 1st Place": {
+      link: "",
+      type: "hackathon",
+    },
+    "Stellar IndiaThon '24 - Infra Track": {
+      link: "",
+      type: "hackathon",
+    },
+    "NuvYuva Tinkerthon '24 - 2nd Place": {
+      link: "",
+      type: "hackathon",
+    },
+    "ITMBU Hackathon '24 - 2nd Place": {
+      link: "",
+      type: "hackathon",
+    },
+    "HackTheLeague '24 - 2x Bounties": {
+      link: "",
+      type: "hackathon",
+    },
+    "Arweave HackerHouse '1 - Runner Up": {
+      link: "",
+      type: "hackathon",
+    },
+  },
+  books: [
+    {
+      title: "Think and Grow Rich - Napoleon Hill"
     },
     {
-      title: "Foundry Stablecoin",
-      href: "https://github.com/Not-Sarthak/defi-stablecoin",
-      dates: "August 2024",
-      active: true,
-      description:
-        "This project is meant to be a stablecoin where users can deposit WETH and WBTC in exchange for a token that will be pegged to the USD.",
-      technologies: [
-        "Foundry",
-        "Solidity",
-        "Chainlink",
-        "Open Zeppelin",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/Not-Sarthak/defi-stablecoin",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      category: "Smart-Contract",
-      image: "",
-      video: "/projects/stablecoin.mp4",
+      title: "Before you Start Up - Pankaj Goyal"
     },
     {
-      title: "Merkle Airdrop",
-      href: "https://github.com/Not-Sarthak/merkle-airdrop",
-      dates: "August 2024",
-      active: true,
-      description:
-        "An introduction to the Merkle Airdrop and Signatures project",
-      technologies: [
-        "Foundry",
-        "Solidity",
-        "EIP-4844"
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/Not-Sarthak/merkle-airdrop",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      category: "Smart-Contract",
-      image: "/projects/merkle.png",
-      video:
-        "",
+      title: "Zero to One - Peter Thiel"
     },
     {
-      title: "AO Calculator",
-      href: "https://ao-unit-converter.ar-io.net/",
-      dates: "September 2024",
-      active: true,
-      description:
-        "Convert effortlessly between AO and Armstrong units. No need to count zeroes.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "TailwindCSS",
-        "Arweave",
-        "AO"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://ao-unit-converter.ar-io.net/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/Not-Sarthak/ao-unit-converter",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      category: "Frontend",
-      image: "",
-      video:
-        "/projects/ao-calculator.mp4",
+      title: "The 5 AM Club - Robin Sharma"
     },
     {
-      title: "Eth Mumbai",
-      href: "https://mumbaieth.vercel.app/",
-      dates: "March 2024",
-      active: true,
-      description:
-        "A website for EthMumbai with an SVG logo that changes colors based on user preferences and allows users to mint it as a NFT.",
-      technologies: [
-        "Next.js",
-        "JavaScript",
-        "TailwindCSS",
-        "Zora",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://mumbaieth.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/Not-Sarthak/eth-mumbai",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      category: "Frontend",
-      image: "/projects/ethmumbai.png",
-      video:
-        "",
-    },
-    {
-      title: "BaseWave",
-      href: "https://www.youtube.com/watch?v=i0FlVIL-6FM",
-      dates: "May 2024",
-      active: true,
-      description:
-        "Frictionless, Decentralized Recurring Payments for Builders on Base built at Onchain Summer [FBI]",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Hardhat",
-        "JavaScript",
-        "TailwindCSS",
-      ],
-      links: [
-        {
-          type: "Demo",
-          href: "https://www.youtube.com/watch?v=i0FlVIL-6FM",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/ForkingAwesome/basewave",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      category: "Hackathon",
-      image: "/projects/basewave.svg",
-      video: "",
-    },
-    {
-      title: "FuelCaster",
-      href: "https://github.com/ForkingAwesome/fuelcaster",
-      dates: "April 2024",
-      active: true,
-      description:
-        "FuelCaster, featuring the VadaPav Token, is a faucet for the Fuel Network built on Farcaster Frames.",
-      technologies: [
-        "Next.js",
-        "Farcaster Frames",
-        "Fuel",
-        "Sway",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://x.com/0xSarthak13/status/1788907538043531380",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/ForkingAwesome/fuelcaster",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      category: "Hackathon",
-      image: "/projects/fuelcaster.png",
-      video: "",
-    },
-    {
-      title: "Quill",
-      href: "https://quill-flow.vercel.app/",
-      dates: "July 2023",
-      active: true,
-      description: "Quill, built on the Flow blockchain, empowers bloggers with ownership, control, and direct monetization of their content.",
-      technologies: [
-        "React.js",
-        "JavaScript",
-        "Cadence",
-        "CSS",
-        "Material UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://quill-flow.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/Not-Sarthak/quill",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      category: "Hackathon",
-      image: "/projects/quill.png",
-      video: "",
-    },
+      title: "The Network State - Balaji Srinivasan"
+    }
   ],
 } as const;
