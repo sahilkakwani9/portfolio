@@ -24,7 +24,7 @@ export function ProjectCard({
   className,
 }: ProjectCardProps) {
   return (
-    <div className={cn("flex flex-col sm:flex-row sm:items-center justify-between group", className)}>
+    <div className={cn("flex flex-row items-center justify-between group", className)}>
       <div className="flex items-center gap-3">
         <h3 className="text-sm">{title}</h3>
       </div>

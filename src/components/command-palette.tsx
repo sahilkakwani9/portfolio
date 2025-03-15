@@ -14,7 +14,6 @@ import {
   TrophyIcon,
   TwitterIcon,
   X,
-  XIcon,
 } from "lucide-react";
 
 type CommandItem = {
@@ -311,9 +310,12 @@ export function CommandPalette() {
                   className="relative z-[101] w-full max-w-[640px] bg-background/95 border border-border/30 shadow-lg sm:rounded-xl overflow-hidden"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="absolute right-4 top-4">
+                  <div className="absolute z-20 right-4 top-4">
                     <button
-                      onClick={() => setOpen(false)}
+                      onClick={() => {
+                        console.log("Closing");
+                        setOpen(false);
+                      }}
                       className="rounded-full p-1.5 opacity-70 transition-all hover:bg-muted/80 hover:opacity-100 focus:outline-none"
                     >
                       <X className="h-4 w-4" />
