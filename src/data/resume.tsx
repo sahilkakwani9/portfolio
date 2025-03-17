@@ -169,6 +169,11 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
           id: 4,
           links: [
             {
+              type: "Website",
+              href: "https://sendai-dashboard.vercel.app/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
               type: "Source",
               href: "https://github.com/Not-Sarthak/sendai-dashboard",
               icon: <GithubIcon className="size-9" />,
@@ -177,7 +182,38 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         },
       },
       Backend: {},
-      "Full Stack": {},
+      "Full Stack": {
+        Hunch: {
+          id: 1,
+          links: [
+            {
+              type: "Website",
+              href: "https://www.hunchkaro.xyz/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/hunch-lens",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Lulo Blinks": {
+          id: 2,
+          links: [
+            {
+              type: "Website",
+              href: "https://dial.to/developer?url=https://www.investorrr.club/api/donate&cluster=mainnet",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/lulo-blinks",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+      },
       "Smart Contracts": {
         "Foundry Stablecoin": {
           id: 1,
