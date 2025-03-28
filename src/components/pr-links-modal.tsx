@@ -103,7 +103,7 @@ export function PRLinksModal({
             className
           )}
         >
-          <span>
+          <span className="flex items-center gap-1">
             <GitPullRequestIcon className="size-3.5" />{" "}
             {normalizedLinks.filter((l) => l.url && l.url !== "#").length}{" "}
             Contributions

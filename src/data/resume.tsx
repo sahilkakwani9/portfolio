@@ -116,6 +116,14 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         "Built a dashboard for SendAI during the Send AI Hackathon, contributed to the website, and built backend [in Flask] and frontend [in Next.js] for a product named 'trAI'",
       prLinks: [],
     },
+    {
+      company: "Permaweb",
+      href: "https://github.com/permaweb",
+      title: "Open Source Contributor",
+      logoUrl: "/work/permaweb.png",
+      description: "Enhanced the AO Cookbook documentation by contributing comprehensive updates and improvements to make the content more accessible and user-friendly for developers working with the Permaweb ecosystem.",
+      prLinks: ["https://github.com/permaweb/ao-cookbook/pull/221"]
+    }
   ],
   projects: [
     {
@@ -181,7 +189,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
           ],
         },
       },
-      Backend: {},
+      // Backend: {},
       "Full Stack": {
         Hunch: {
           id: 1,
@@ -213,6 +221,141 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
             },
           ],
         },
+        Vox: {
+          id: 3,
+          links: [
+            {
+              type: "Website",
+              href: "https://voxnow.xyz/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/vox",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Fuelcaster": {
+          id: 4,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/ForkingAwesome/fuelcaster",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Say Wings": {
+          id: 5,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/ForkingAwesome/say-wings",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Raize": {
+          id: 6,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/ForkingAwesome/raize",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Muse": {
+          id: 7,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/muse",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Curators": {
+          id: 8,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/curators",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Clone": {
+          id: 9,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/clone-xyz",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Navi Rides": {
+          id: 10,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/navi-rides",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Baskt": {
+          id: 11,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/baskt",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Buildooor": {
+          id: 12,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/buildooor",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Basewave": {
+          id: 13,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/basewave",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Quill": {
+          id: 14,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/quill",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Wash Wheels": {
+          id: 15,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/wash-wheels",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        }
       },
       "Smart Contracts": {
         "Foundry Stablecoin": {
