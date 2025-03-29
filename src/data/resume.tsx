@@ -189,7 +189,18 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
           ],
         },
       },
-      // Backend: {},
+      Backend: {
+        "Curators": {
+          id: 1,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/curators",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        }
+      },
       "Full Stack": {
         Hunch: {
           id: 1,
@@ -272,16 +283,6 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
             {
               type: "Source",
               href: "https://github.com/Not-Sarthak/muse",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Curators": {
-          id: 8,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/curators",
               icon: <GithubIcon className="size-9" />,
             },
           ],

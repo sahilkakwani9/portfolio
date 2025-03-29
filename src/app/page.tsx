@@ -5,7 +5,7 @@ import { ResumeCard } from "@/components/cards/resume-card";
 import { DATA } from "@/data/resume";
 import VideoPlayer from "@/components/ui/video";
 import TextEffectWithExit from "@/components/headline";
-import { ProjectCard, ProjectList } from "@/components/cards/project-card";
+import { ProjectList } from "@/components/cards/project-card";
 import { ProjectTabs } from "@/components/project-tabs";
 import { useState } from "react";
 import { HackathonCard } from "@/components/cards/hackathon-card";
@@ -160,7 +160,7 @@ export default function Page() {
               onTabChange={setActiveProjectTab}
             />
 
-            <div className="mt-4 space-y-1 border-t border-border/40">
+            <div className="mt-4 space-y-1">
               {Object.keys(getProjectsForTab(activeProjectTab)).length > 0 ? (
                 <ProjectList
                   projects={Object.entries(getProjectsForTab(activeProjectTab)).map(

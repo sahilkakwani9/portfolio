@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
+import BlurFade from "@/components/text/blur-fade";
 
 interface ProjectLink {
   type: string;
@@ -57,69 +59,62 @@ export function ProjectCard({
 }
 
 export function ProjectList({ projects }: ProjectListProps) {
-  const [visibleProjects, setVisibleProjects] = React.useState<number>(5);
+  const [expanded, setExpanded] = React.useState<boolean>(false);
   const [isAnimating, setIsAnimating] = React.useState<boolean>(false);
   
-  const displayedProjects = projects.slice(0, visibleProjects);
-  const isExpanded = visibleProjects > 5;
-  const showLoadMore = projects.length > visibleProjects;
+  const displayedProjects = expanded ? projects : projects.slice(0, 5);
+  const showLoadMore = !expanded && projects.length > 5;
   
-  const handleLoadMore = () => {
+  const handleToggleExpand = (expand: boolean) => {
     setIsAnimating(true);
     setTimeout(() => {
-      setVisibleProjects(prev => Math.min(prev + 5, projects.length));
-      setTimeout(() => setIsAnimating(false), 150);
-    }, 50);
-  };
-  
-  const handleLoadLess = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setVisibleProjects(5);
+      setExpanded(expand);
       setTimeout(() => setIsAnimating(false), 150);
     }, 50);
   };
 
   return (
     <div className="flex flex-col space-y-4">
-      <div className="space-y-0 transition-all duration-500 ease-in-out">
+      <BlurFade delay={0.04} className="space-y-0 transition-all duration-500 ease-in-out">
         {displayedProjects.map((project, index) => (
           <div 
             key={`${project.title}-${index}`} 
-            className={`transition-all duration-300 ease-in-out transform ${
-              isAnimating ? 'opacity-70 scale-[0.99]' : 'opacity-100 scale-100'
-            }`}
+            className="transition-all duration-300 ease-in-out transform"
           >
             <ProjectCard
               tag={project.tag}
               title={project.title}
               links={project.links}
               description={project.description}
-              className={index !== 0 ? "border-t border-border/40 py-0.5" : ""}
+              className={index !== 0 ? "border-t border-border/40 pt-1" : ""}
             />
           </div>
         ))}
-      </div>
+      </BlurFade>
       
-      <div className={`flex relative justify-center mt-4 gap-4 transition-opacity duration-300 ${isAnimating ? 'opacity-70' : 'opacity-100'}`}>
+      <div className="flex relative justify-center mt-4 gap-4">
         {showLoadMore && (
-          <button
-            onClick={handleLoadMore}
-            className="inline-flex z-10 items-center justify-center rounded-md bg-[#b0e721] px-3 py-1 text-sm font-medium text-background shadow transition-all duration-300 hover:bg-[#b0e721]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring hover:scale-105"
-            disabled={isAnimating}
-          >
-            Load More
-          </button>
+          <BlurFade delay={0.04}>
+            <button
+              onClick={() => handleToggleExpand(true)}
+              className="inline-flex z-10 gap-2 items-center justify-center rounded-md px-3 py-1 text-sm font-medium shadow transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring hover:scale-105 text-foreground"
+              disabled={isAnimating}
+            >
+              Load More <ChevronDownIcon className="w-4 h-4" />
+            </button>
+          </BlurFade>
         )}
         
-        {isExpanded && (
-          <button
-            onClick={handleLoadLess}
-            className="inline-flex z-10 items-center justify-center rounded-md bg-muted px-3 py-1 text-sm font-medium text-muted-foreground shadow transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring hover:scale-105"
-            disabled={isAnimating}
-          >
-            Show Less
-          </button>
+        {expanded && (
+          <BlurFade delay={0.04}>
+            <button
+              onClick={() => handleToggleExpand(false)}
+              className="inline-flex z-10 gap-2 items-center justify-center rounded-md px-3 py-1 text-sm font-medium text-muted-foreground shadow transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring hover:scale-105"
+              disabled={isAnimating}
+            >
+              Show Less <ChevronUpIcon className="w-4 h-4" />
+            </button>
+          </BlurFade>
         )}
       </div>
     </div>
