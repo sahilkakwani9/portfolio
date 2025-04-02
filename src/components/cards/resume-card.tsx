@@ -42,7 +42,7 @@ export const ResumeCard = ({
   };
 
   return (
-    <div className="relative">
+    <div className="relative my-2">
       <Link
         href={href || "#"}
         className="block cursor-pointer"

@@ -5,7 +5,6 @@ import BlurFade from "@/components/text/blur-fade";
 import Link from "next/link";
 import { AchievementCard } from "@/components/cards/hackathon-card";
 import { useState, useMemo } from "react";
-import { Tabs } from "@/components/project-tabs";
 import { cn } from "@/lib/utils";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -53,15 +52,6 @@ export default function WinsPage() {
           A collection of achievements, wins, and milestones I've
           reached throughout my journey.
         </p>
-      </BlurFade>
-      
-      <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
-        <Tabs 
-          tabs={achievementTabs}
-          activeTab={activeTab}
-          onTabChange={(tab) => setActiveTab(tab as AchievementType)}
-          className=""
-        />
       </BlurFade>
 
       <div className={cn(

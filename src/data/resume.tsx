@@ -73,10 +73,20 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         "Implemented multiple cross-chain bridge routes, including Hyperliquid,  Movement, Monad (Testnet), and other EVM/Non-EVM integrations for both Testnet and Mainnet environments. Built the Gasyard Bridge Explorer using Next.js, TypeScript, Tanstack Query, Zustand, and Tailwind CSS, providing an interface for transaction tracking. Developed Fuelbae Agent, a powerful tool that enables users to execute complex DeFi actions seamlessly across various protocols.",
     },
     {
+      company: "Send",
+      href: "https://www.thesendcoin.com/",
+      title: "Open Source Contributor",
+      logoUrl: "/work/send.png",
+      start: "-",
+      end: "-",
+      description:
+        "Built a dashboard for SendAI during the Send AI Hackathon, contributed to the website, and built backend [in Flask] and frontend [in Next.js] for a product named 'trAI'",
+    },
+    {
       company: "0rbit",
       href: "https://www.0rbit.co/",
       location: "Remote",
-      title: "Full Stack Developer Intern",
+      title: "Full Stack Developer",
       logoUrl: "/work/0rbit.jpg",
       start: "March 2024",
       end: "December 2024",
@@ -107,27 +117,26 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
     },
   ],
   openSource: [
-    {
-      company: "Send",
-      href: "https://www.thesendcoin.com/",
-      title: "Open Source Contributor",
-      logoUrl: "/work/send.png",
-      description:
-        "Built a dashboard for SendAI during the Send AI Hackathon, contributed to the website, and built backend [in Flask] and frontend [in Next.js] for a product named 'trAI'",
-      prLinks: [],
-    },
-    {
-      company: "Permaweb",
-      href: "https://github.com/permaweb",
-      title: "Open Source Contributor",
-      logoUrl: "/work/permaweb.png",
-      description: "Enhanced the AO Cookbook documentation by contributing comprehensive updates and improvements to make the content more accessible and user-friendly for developers working with the Permaweb ecosystem.",
-      prLinks: ["https://github.com/permaweb/ao-cookbook/pull/221"]
-    }
   ],
   projects: [
     {
       Frontend: {
+        Hunch: {
+          id: 1,
+          links: [
+            {
+              type: "Website",
+              href: "https://www.hunchkaro.xyz/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/hunch-lens",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description: "A full-stack social platform built with Next.js and Lens Protocol, enabling decentralized social interactions.",
+        },
         "Sol UI": {
           id: 1,
           links: [
@@ -142,6 +151,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
+          description: "A modern UI component library for Solana dApps, featuring customizable components and seamless integration with Solana wallets.",
         },
         "AO Calculator": {
           id: 2,
@@ -157,6 +167,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
+          description: "A unit converter for the AO ecosystem, helping developers and users convert between different units of measurement.",
         },
         EthMumbai: {
           id: 3,
@@ -172,6 +183,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
+          description: "A web3 application for the Mumbai testnet, showcasing Ethereum development capabilities and smart contract integration.",
         },
         "SendAI Dashboard": {
           id: 4,
@@ -187,6 +199,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
+          description: "A comprehensive dashboard for SendAI, providing analytics and insights for AI-powered transactions.",
         },
       },
       Backend: {
@@ -202,21 +215,6 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         }
       },
       "Full Stack": {
-        Hunch: {
-          id: 1,
-          links: [
-            {
-              type: "Website",
-              href: "https://www.hunchkaro.xyz/",
-              icon: <LinkIcon className="size-9" />,
-            },
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/hunch-lens",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
         "Lulo Blinks": {
           id: 2,
           links: [
@@ -231,9 +229,26 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
+          description: "A decentralized donation platform with seamless payment integration and real-time transaction tracking.",
+        },
+        "Ghiblub": {
+          id: 3,
+          links: [
+            {
+              type: "Website",
+              href: "https://ghiblub.vercel.app/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/ghiblub",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description: "A community platform for Studio Ghibli fans, featuring interactive discussions and content sharing.",
         },
         Vox: {
-          id: 3,
+          id: 4,
           links: [
             {
               type: "Website",
@@ -246,117 +261,8 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
+          description: "A decentralized voice platform enabling real-time audio conversations and community building.",
         },
-        "Fuelcaster": {
-          id: 4,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/ForkingAwesome/fuelcaster",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Say Wings": {
-          id: 5,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/ForkingAwesome/say-wings",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Raize": {
-          id: 6,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/ForkingAwesome/raize",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Muse": {
-          id: 7,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/muse",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Clone": {
-          id: 9,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/clone-xyz",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Navi Rides": {
-          id: 10,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/navi-rides",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Baskt": {
-          id: 11,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/baskt",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Buildooor": {
-          id: 12,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/buildooor",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Basewave": {
-          id: 13,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/basewave",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Quill": {
-          id: 14,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/quill",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Wash Wheels": {
-          id: 15,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/wash-wheels",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        }
       },
       "Smart Contracts": {
         "Foundry Stablecoin": {

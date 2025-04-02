@@ -1,5 +1,7 @@
-import React from "react";
+"use client";
+
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface TabsProps {
   tabs: string[];
@@ -8,44 +10,30 @@ interface TabsProps {
   className?: string;
 }
 
-const tabMapping = {
-  "Smart Contracts": "Contracts",
-  "Full Stack": "Fullstack",
-  "hackathon": "Hackathons",
-  "title": "Title",
-  "speaker": "Speaking"
-};
-
-export function Tabs({
-  tabs,
-  activeTab,
-  onTabChange,
-  className,
-}: TabsProps) {
+export function Tabs({ tabs, activeTab, onTabChange, className }: TabsProps) {
   return (
-    <div className={cn("flex flex-wrap gap-2 justify-center", className)}>
-      {tabs.map((tab) => {
-        const displayTab = tabMapping[tab as keyof typeof tabMapping] || tab;
-        const isActive = activeTab === tab;
-        
-        return (
-          <button
-            key={tab}
-            onClick={() => onTabChange(tab)}
-            className={cn(
-              "px-4 py-1.5 text-xs rounded-full transition-all duration-300 font-medium",
-              isActive
-                ? "bg-foreground text-background shadow-sm" 
-                : "bg-background hover:bg-muted/50 border border-border/40 hover:border-border/80"
-            )}
-          >
-            {displayTab}
-          </button>
-        );
-      })}
+    <div className={cn("flex space-x-1", className)}>
+      {tabs.map((tab) => (
+        <button
+          key={tab}
+          onClick={() => onTabChange(tab)}
+          className={cn(
+            "relative px-3 py-1.5 text-sm font-medium transition-colors",
+            activeTab === tab
+              ? "text-foreground"
+              : "text-muted-foreground hover:text-foreground"
+          )}
+        >
+          {activeTab === tab && (
+            <motion.div
+              layoutId="activeTab"
+              className="absolute inset-0 bg-muted rounded-md"
+              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+            />
+          )}
+          <span className="relative capitalize">{tab}</span>
+        </button>
+      ))}
     </div>
   );
-}
-
-// For backward compatibility
-export const ProjectTabs = Tabs; 
+} 

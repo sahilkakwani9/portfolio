@@ -3,15 +3,15 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 import BlurFade from "@/components/text/blur-fade";
+import { motion } from "framer-motion";
 
 interface ProjectLink {
   type: string;
   href: string;
-  icon: string;
+  icon: React.ReactNode;
 }
 
 interface ProjectCardProps {
-  tag: string;
   title: string;
   links: ProjectLink[];
   description?: string;
@@ -20,7 +20,6 @@ interface ProjectCardProps {
 
 interface ProjectListProps {
   projects: {
-    tag: string;
     title: string;
     links: ProjectLink[];
     description?: string;
@@ -28,32 +27,60 @@ interface ProjectListProps {
 }
 
 export function ProjectCard({
-  tag,
   title,
   links,
   description,
   className,
 }: ProjectCardProps) {
+  const [isExpanded, setIsExpanded] = React.useState(false);
+
   return (
-    <div className={cn("flex flex-row items-center justify-between group", className)}>
-      <div className="flex items-center gap-3">
-        <h3 className="text-sm">{title}</h3>
-      </div>
-      
-      <div className="flex items-center gap-3">
-        {links.map((link, index) => (
-          <React.Fragment key={link.type}>
-            <Link 
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-1"
+    <div className={cn("flex flex-col group", className)}>
+      <div className="flex flex-row items-center justify-between">
+        <h3 className="text-sm font-medium">{title}</h3>
+        <div className="flex items-center">
+          {links.map((link, index) => (
+            <React.Fragment key={link.type}>
+              <Link 
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-1"
+              >
+                {link.icon}
+              </Link>
+            </React.Fragment>
+          ))}
+          {description && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
-              {link.icon}
-            </Link>
-          </React.Fragment>
-        ))}
+              {isExpanded ? (
+                <ChevronUpIcon className="h-4 w-4" />
+              ) : (
+                <ChevronDownIcon className="h-4 w-4" />
+              )}
+            </button>
+          )}
+        </div>
       </div>
+      {description && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{
+            opacity: isExpanded ? 1 : 0,
+            height: isExpanded ? "auto" : 0,
+          }}
+          transition={{
+            duration: 0.3,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="text-sm text-muted-foreground"
+        >
+          {description}
+        </motion.div>
+      )}
     </div>
   );
 }
@@ -74,19 +101,18 @@ export function ProjectList({ projects }: ProjectListProps) {
   };
 
   return (
-    <div className="flex flex-col space-y-4">
-      <BlurFade delay={0.04} className="space-y-0 transition-all duration-500 ease-in-out">
+    <div className="flex flex-col">
+      <BlurFade delay={0.04} className="transition-all duration-500 ease-in-out">
         {displayedProjects.map((project, index) => (
           <div 
             key={`${project.title}-${index}`} 
             className="transition-all duration-300 ease-in-out transform"
           >
             <ProjectCard
-              tag={project.tag}
               title={project.title}
               links={project.links}
               description={project.description}
-              className={index !== 0 ? "border-t border-border/40 pt-1" : ""}
+              className={index !== 0 ? "border-t border-border/40" : ""}
             />
           </div>
         ))}

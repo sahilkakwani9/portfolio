@@ -6,34 +6,52 @@ import { DATA } from "@/data/resume";
 import VideoPlayer from "@/components/ui/video";
 import TextEffectWithExit from "@/components/headline";
 import { ProjectList } from "@/components/cards/project-card";
-import { ProjectTabs } from "@/components/project-tabs";
-import { useState } from "react";
 import { HackathonCard } from "@/components/cards/hackathon-card";
 import { Footer } from "@/components/footer";
 import { CommandPalette } from "@/components/command-palette";
 
+interface ProjectLink {
+  type: string;
+  href: string;
+  icon: React.ReactNode;
+}
+
+interface ProjectData {
+  id: number;
+  links: ProjectLink[];
+  description?: string;
+}
+
+type ProjectsData = {
+  [key: string]: {
+    [key: string]: ProjectData;
+  };
+};
+
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
-  const projectCategories = Object.keys(DATA.projects[0]);
-  const [activeProjectTab, setActiveProjectTab] = useState<string>(
-    projectCategories[0]
-  );
-  const workCategories = ["Work", "Open Source"];
-  const [activeWorkTab, setActiveWorkTab] = useState<string>(workCategories[0]);
-
-  const getProjectsForTab = (tab: string) => {
-    const projects = DATA.projects[0];
-    return (projects as Record<string, Record<string, any>>)[tab] || {};
+  const getAllProjects = () => {
+    const projects = DATA.projects[0] as unknown as ProjectsData;
+    const allProjects = [];
+    
+    for (const category in projects) {
+      const categoryProjects = projects[category];
+      for (const projectName in categoryProjects) {
+        const projectData = categoryProjects[projectName];
+        allProjects.push({
+          title: projectName,
+          links: projectData.links || [],
+          description: projectData.description,
+        });
+      }
+    }
+    
+    return allProjects;
   };
 
-  const getWorkForTab = (tab: string) => {
-    if (tab === "Work") {
-      return DATA.work;
-    } else if (tab === "Open Source") {
-      return DATA.openSource;
-    }
-    return [];
+  const getAllWork = () => {
+    return [...DATA.work, ...DATA.openSource];
   };
 
   return (
@@ -58,19 +76,9 @@ export default function Page() {
               — developer
             </span>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY}>
-            <VideoPlayer src="/sarthak-pfp.mp4" />
-          </BlurFade>
         </div>
       </section>
       <section id="about">
-        <div className="flex min-h-0 pb-5 flex-col justify-center items-center gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <div className="justify-center flex items-center w-32 rounded-lg bg-foreground text-background px-3 py-0.5 text-sm">
-              About
-            </div>
-          </BlurFade>
-        </div>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <div className="prose max-w-full text-pretty font-sans text-md text-muted-foreground dark:prose-invert leading-[1.5]">
             I'm a{" "}
@@ -125,6 +133,9 @@ export default function Page() {
           </div>
         </BlurFade>
       </section>
+      <BlurFade delay={BLUR_FADE_DELAY}>
+            <VideoPlayer src="/sarthak-pfp.mp4" />
+          </BlurFade>
       <section id="projects">
         <div className="space-y-8 w-full py-6">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -154,29 +165,8 @@ export default function Page() {
           </BlurFade>
 
           <BlurFade delay={BLUR_FADE_DELAY * 12}>
-            <ProjectTabs
-              tabs={projectCategories}
-              activeTab={activeProjectTab}
-              onTabChange={setActiveProjectTab}
-            />
-
-            <div className="mt-4 space-y-1">
-              {Object.keys(getProjectsForTab(activeProjectTab)).length > 0 ? (
-                <ProjectList
-                  projects={Object.entries(getProjectsForTab(activeProjectTab)).map(
-                    ([projectName, projectData]) => ({
-                      tag: activeProjectTab,
-                      title: projectName,
-                      links: projectData.links || [],
-                      description: projectData.description,
-                    })
-                  )}
-                />
-              ) : (
-                <div className="py-8 text-center text-muted-foreground text-sm italic">
-                  No projects in this category yet. Check back soon!
-                </div>
-              )}
+            <div className="">
+              <ProjectList projects={getAllProjects()} />
             </div>
           </BlurFade>
         </div>
@@ -189,18 +179,9 @@ export default function Page() {
             </div>
           </BlurFade>
 
-          <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
-            <ProjectTabs
-              tabs={workCategories}
-              activeTab={activeWorkTab}
-              onTabChange={setActiveWorkTab}
-              className="mt-4"
-            />
-          </BlurFade>
-
-          <div className="flex flex-col gap-y-4 border-t border-border/40 w-full">
-            {getWorkForTab(activeWorkTab).length > 0 ? (
-              getWorkForTab(activeWorkTab).map((item: any, id: number) => (
+          <div className="flex flex-col border-t pt-2 border-border/40 w-full">
+            {getAllWork().length > 0 ? (
+              getAllWork().map((item: any, id: number) => (
                 <BlurFade
                   key={item.company}
                   delay={BLUR_FADE_DELAY * 6 + id * 0.05}
@@ -213,24 +194,19 @@ export default function Page() {
                     subtitle={item.title}
                     href={item.href}
                     period={
-                      activeWorkTab === "Work" && item.start && item.end
+                      item.start && item.end
                         ? `${item.start} - ${item.end || "Present"}`
-                        : activeWorkTab === "Open Source"
-                        ? ""
                         : ""
                     }
                     description={item.description}
-                    prLinks={
-                      activeWorkTab === "Open Source" ? item.prLinks : undefined
-                    }
-                    isOpenSource={activeWorkTab === "Open Source"}
+                    prLinks={item.prLinks}
+                    isOpenSource={!!item.prLinks}
                   />
                 </BlurFade>
               ))
             ) : (
               <div className="py-8 text-center text-muted-foreground text-sm italic">
-                No {activeWorkTab.toLowerCase()} experience to show yet. Check
-                back soon!
+                No work experience to show yet. Check back soon!
               </div>
             )}
           </div>
