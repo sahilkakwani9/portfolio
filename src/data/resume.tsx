@@ -135,7 +135,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A full-stack social platform built with Next.js and Lens Protocol, enabling decentralized social interactions.",
+          description: "A social trading platform connecting people who spot viral content early with those who want to profit from it. Create markets for viral posts, trade on insights, and earn from your predictions.",
         },
         "Sol UI": {
           id: 1,
@@ -151,39 +151,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A modern UI component library for Solana dApps, featuring customizable components and seamless integration with Solana wallets.",
-        },
-        "AO Calculator": {
-          id: 2,
-          links: [
-            {
-              type: "Website",
-              href: "https://ao-unit-converter.ar-io.net/",
-              icon: <LinkIcon className="size-9" />,
-            },
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/ao-unit-converter",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-          description: "A unit converter for the AO ecosystem, helping developers and users convert between different units of measurement.",
-        },
-        EthMumbai: {
-          id: 3,
-          links: [
-            {
-              type: "Website",
-              href: "https://mumbaieth.vercel.app/",
-              icon: <LinkIcon className="size-9" />,
-            },
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/eth-mumbai",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-          description: "A web3 application for the Mumbai testnet, showcasing Ethereum development capabilities and smart contract integration.",
+          description: "A modern UI component library for Solana dApps, featuring customizable components native to Solana Ecosystem.",
         },
         "SendAI Dashboard": {
           id: 4,
@@ -199,7 +167,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A comprehensive dashboard for SendAI, providing analytics and insights for AI-powered transactions.",
+          description: "A comprehensive dashboard for SendAI, providing analytics and insights for projects built during Send AI Hackathon.",
         },
       },
       Backend: {
@@ -212,6 +180,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
+          description: "Curators Backend automates the process of identifying high-performing Liquid Staking Tokens (LSTs) on Solana and facilitates automatic swapping to optimize yield.",
         }
       },
       "Full Stack": {
@@ -229,7 +198,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A decentralized donation platform with seamless payment integration and real-time transaction tracking.",
+          description: "Solana Blink to deposit funds directly to Lulo",
         },
         "Ghiblub": {
           id: 3,
@@ -245,7 +214,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A community platform for Studio Ghibli fans, featuring interactive discussions and content sharing.",
+          description: "A community platform for Studio Ghibli fans, that helps them find out how closely they're connected to literally anyone on github.",
         },
         Vox: {
           id: 4,
@@ -261,7 +230,39 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A decentralized voice platform enabling real-time audio conversations and community building.",
+          description: "A Ticket-Reselling platform for events, that allows users to buy and sell tickets for events.",
+        },
+        "AO Calculator": {
+          id: 5,
+          links: [
+            {
+              type: "Website",
+              href: "https://ao-unit-converter.ar-io.net/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/ao-unit-converter",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description: "A unit converter for the AO ecosystem, helping developers and users convert between AO and Armstrong.",
+        },
+        EthMumbai: {
+          id: 6,
+          links: [
+            {
+              type: "Website",
+              href: "https://mumbaieth.vercel.app/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/eth-mumbai",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description: "A website for EthMumbai with an SVG logo that changes colors based on user preferences.",
         },
       },
       "Smart Contracts": {
