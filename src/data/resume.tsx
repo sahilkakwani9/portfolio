@@ -47,8 +47,8 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         navbar: true,
       },
       gm: {
-        name: "Wins",
-        url: "/wins",
+        name: "Download Resume",
+        url: "/frontend.pdf",
         icon: Icons.work,
         navbar: true,
       },
