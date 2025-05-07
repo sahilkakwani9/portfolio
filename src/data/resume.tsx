@@ -68,19 +68,9 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
       title: "Full Stack Developer",
       logoUrl: "/work/gasyard.png",
       start: "January 2025",
-      end: "Current",
+      end: "May 2025",
       description:
-        "Implemented multiple cross-chain bridge routes, including Hyperliquid,  Movement, Monad (Testnet), and other EVM/Non-EVM integrations for both Testnet and Mainnet environments. Built the Gasyard Bridge Explorer using Next.js, TypeScript, Tanstack Query, Zustand, and Tailwind CSS, providing an interface for transaction tracking. Developed Fuelbae Agent, a powerful tool that enables users to execute complex DeFi actions seamlessly across various protocols.",
-    },
-    {
-      company: "Send",
-      href: "https://www.thesendcoin.com/",
-      title: "Open Source Contributor",
-      logoUrl: "/work/send.png",
-      start: "-",
-      end: "-",
-      description:
-        "Built a dashboard for SendAI during the Send AI Hackathon, contributed to the website, and built backend [in Flask] and frontend [in Next.js] for a product named 'trAI'",
+        "Built backend with Fastify, Docker, and PostgreSQL that handled $570K in transaction volume and processed 120K requests. Implemented cross-chain bridge routes for Hyperliquid, Movement, Monad (Testnet), and other EVM/Non-EVM integrations in Testnet and Mainnet environments. Created Gasyard Bridge Explorer using Next.js, TypeScript, Tanstack Query, Zustand, and Tailwind CSS for transaction tracking. Developed Fuelbae Agent tool for executing DeFi actions across protocols."
     },
     {
       company: "0rbit",
@@ -94,11 +84,11 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         "Developed multiple smart contracts in Lua for the AO Ecosystem, while battle-testing 0rbit's core infrastructure and contributing to the core node. I also integrated frontend tutorials using AOConnect, showcasing 0rbit's capabilities in blog posts. Beyond code, I enhanced the documentation, converted Figma designs into functional UI components, and contributed to the website development. Additionally, I handled social media content and authored blogs and technical documentation, ensuring a better developer experience.",
     },
     {
-      company: "Pyano",
+      company: "Pyano (now Bytebell AI)",
       href: "",
       location: "Remote",
       title: "Software Developer Intern (Part-Time)",
-      logoUrl: "/work/pyano.png",
+      logoUrl: "/work/bytebell.png",
       start: "May 2024",
       end: "June 2024",
       description:
