@@ -46,9 +46,9 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
 
         navbar: true,
       },
-      gm: {
+      resume: {
         name: "Download Resume",
-        url: "/frontend.pdf",
+        url: "/resume.pdf",
         icon: Icons.work,
         navbar: true,
       },
