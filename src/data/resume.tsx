@@ -344,6 +344,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
     },
     "Based India '24 - Winner List": {
       link: "",
+      type: "hackathon"
     },
     "Colosseum Radar Hackathon - 2x Bounties": {
       link: "",
