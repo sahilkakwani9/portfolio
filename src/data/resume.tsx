@@ -11,7 +11,7 @@ export const DATA = {
   summary: `
 I'm a full-stack developer with an experience of working with various languages and blockchains.
 
-Previously, I've interned at 3x early-stage startups and have won 20x hackathons🏆. I enjoy contributing to open source projects. I'm also a member at FBI (@callusfbi) and contributor at SuperteamIn (@superteamIn).
+Previously, I've interned at 3x early-stage startups and have won 20x hackathons🏆. I enjoy contributing to open source projects. I'm also a member at SuperteamIn (@superteamIn) & FBI (@callusfbi).
 
 Beyond code, I'm passionate about cinematography and am stepping out of my comfort zone to create both technical and non-technical content. I'm a sneakerhead, love traveling, and enjoy endless talks on finance. Also, I play chess.
 `,
@@ -70,7 +70,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
       start: "January 2025",
       end: "May 2025",
       description:
-        "Built backend with Fastify, Docker, and PostgreSQL that handled $570K in transaction volume and processed 120K requests. Implemented cross-chain bridge routes for Hyperliquid, Movement, Monad (Testnet), and other EVM/Non-EVM integrations in Testnet and Mainnet environments. Created Gasyard Bridge Explorer using Next.js, TypeScript, Tanstack Query, Zustand, and Tailwind CSS for transaction tracking. Developed Fuelbae Agent tool for executing DeFi actions across protocols."
+        "Built backend with Fastify, Docker, and PostgreSQL that handled $570K in transaction volume and processed 120K requests. Implemented cross-chain bridge routes for Hyperliquid, Movement, Monad (Testnet), and other EVM/Non-EVM integrations in Testnet and Mainnet environments. Created Gasyard Bridge Explorer using Next.js, TypeScript, Tanstack Query, Zustand, and Tailwind CSS for transaction tracking. Developed Fuelbae Agent tool for executing DeFi actions across protocols.",
     },
     {
       company: "0rbit",
@@ -106,8 +106,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         "Developed over 35 charts using various libraries with React.js and TailwindCSS. I led the end-to-end state management process and converted more than 30 pages Figma design into functional code.",
     },
   ],
-  openSource: [
-  ],
+  openSource: [],
   projects: [
     {
       Frontend: {
@@ -125,10 +124,11 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A social trading platform connecting people who spot viral content early with those who want to profit from it. Create markets for viral posts, trade on insights, and earn from your predictions.",
+          description:
+            "A social trading platform connecting people who spot viral content early with those who want to profit from it. Create markets for viral posts, trade on insights, and earn from your predictions.",
         },
         "Sol UI": {
-          id: 1,
+          id: 2,
           links: [
             {
               type: "Website",
@@ -141,7 +141,25 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A modern UI component library for Solana dApps, featuring customizable components native to Solana Ecosystem.",
+          description:
+            "A modern UI component library for Solana dApps, featuring customizable components native to Solana Ecosystem.",
+        },
+        "Superteam Security Dashboard": {
+          id: 3,
+          links: [
+            {
+              type: "Website",
+              href: "https://st-security.vercel.app/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/st-security",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description:
+            "Superteam Security Dashboard is a one-stop place to read everything about hacks, exploits, and vulnerabilities in the Solana Ecosystem.",
         },
         "SendAI Dashboard": {
           id: 4,
@@ -157,11 +175,12 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A comprehensive dashboard for SendAI, providing analytics and insights for projects built during Send AI Hackathon.",
+          description:
+            "A comprehensive dashboard for SendAI, providing analytics and insights for projects built during Send AI Hackathon.",
         },
       },
       Backend: {
-        "Curators": {
+        Curators: {
           id: 1,
           links: [
             {
@@ -170,8 +189,9 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "Curators Backend automates the process of identifying high-performing Liquid Staking Tokens (LSTs) on Solana and facilitates automatic swapping to optimize yield.",
-        }
+          description:
+            "Curators Backend automates the process of identifying high-performing Liquid Staking Tokens (LSTs) on Solana and facilitates automatic swapping to optimize yield.",
+        },
       },
       "Full Stack": {
         "Lulo Blinks": {
@@ -190,7 +210,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
           ],
           description: "Solana Blink to deposit funds directly to Lulo",
         },
-        "Ghiblub": {
+        Ghiblub: {
           id: 3,
           links: [
             {
@@ -204,7 +224,8 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A community platform for Studio Ghibli fans, that helps them find out how closely they're connected to literally anyone on github.",
+          description:
+            "A community platform for Studio Ghibli fans, that helps them find out how closely they're connected to literally anyone on github.",
         },
         Vox: {
           id: 4,
@@ -220,7 +241,8 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A Ticket-Reselling platform for events, that allows users to buy and sell tickets for events.",
+          description:
+            "A Ticket-Reselling platform for events, that allows users to buy and sell tickets for events.",
         },
         "AO Calculator": {
           id: 5,
@@ -236,7 +258,8 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A unit converter for the AO ecosystem, helping developers and users convert between AO and Armstrong.",
+          description:
+            "A unit converter for the AO ecosystem, helping developers and users convert between AO and Armstrong.",
         },
         EthMumbai: {
           id: 6,
@@ -252,7 +275,8 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "A website for EthMumbai with an SVG logo that changes colors based on user preferences.",
+          description:
+            "A website for EthMumbai with an SVG logo that changes colors based on user preferences.",
         },
       },
       "Smart Contracts": {
@@ -306,6 +330,10 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
     },
   ],
   wins: {
+    "Superteam Security Dashboard - 1st Place": {
+      link: "",
+      type: "hackathon",
+    },
     "Fellow @Wormhole India": {
       link: "",
       type: "title",
@@ -314,7 +342,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
       link: "",
       type: "title",
     },
-    "Contributor @SuperteamIn": {
+    "Member @SuperteamIn": {
       link: "",
       type: "title",
     },
@@ -344,7 +372,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
     },
     "Based India '24 - Winner List": {
       link: "",
-      type: "hackathon"
+      type: "hackathon",
     },
     "Colosseum Radar Hackathon - 2x Bounties": {
       link: "",
