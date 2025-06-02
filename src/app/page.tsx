@@ -106,22 +106,19 @@ export default function Page() {
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
                 contributing
               </span>{" "}
-              to open source projects. I'm a contributor at{" "}
+              to open source projects. I'm a member at{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
                 SuperteamIn
-              </span>
-              , a member of{" "}
+              </span>,{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
                 FBI
               </span>{" "}
-              (@callusfbi), a{" "}
+              (@callusfbi), and the {" "}
+              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
+              Network School</span>, and also a{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
                 Wormhole Fellow
               </span>{" "}
-              and resident at{" "}
-              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
-                Network School
-              </span>
               .
             </div>
             <div className="mt-4">
