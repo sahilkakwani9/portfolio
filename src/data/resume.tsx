@@ -280,8 +280,32 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         },
       },
       "Smart Contracts": {
-        "Foundry Stablecoin": {
+        "Vault Program": {
           id: 1,
+          description:
+            "Solana Vault Program using Anchor",
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/vault-anchor",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Escrow Program": {
+          id: 2,
+          description:
+            "Solana Escrow Program using Anchor",
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/escrow-anchor/",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "Foundry Stablecoin": {
+          id: 3,
           description:
             "This project is meant to be a stablecoin where users can deposit WETH and WBTC in exchange for a token that will be pegged to the USD.",
           links: [
@@ -293,7 +317,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
           ],
         },
         "Merkle Airdrop": {
-          id: 2,
+          id: 4,
           description:
             "An introduction to the Merkle Airdrop and Signatures project",
           links: [
@@ -305,7 +329,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
           ],
         },
         "DAO - Foundry": {
-          id: 2,
+          id: 5,
           description: "On-chain voting system for DAOs",
           links: [
             {
@@ -316,7 +340,7 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
           ],
         },
         "ERC - 4337 / Foundry": {
-          id: 2,
+          id: 6,
           description: "A project to learn Account Abstraction using EIP-4337",
           links: [
             {
