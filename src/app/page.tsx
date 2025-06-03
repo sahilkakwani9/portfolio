@@ -91,13 +91,6 @@ export default function Page() {
             </span>
             .
             <div className="mt-4">
-              Previously, I've interned at{" "}
-              <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
-                3x early-stage startups
-              </span>
-              .
-            </div>
-            <div className="mt-4">
               I've won{" "}
               <span className="font-semibold hover:text-foreground/80 cursor-pointer text-foreground">
                 ~20 hackathons
