@@ -2,11 +2,22 @@
 
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface TabsProps {
   tabs: string[];
   activeTab: string;
   onTabChange: (tab: string) => void;
+  className?: string;
+}
+
+interface NestedTabsProps {
+  parentTabs: string[];
+  activeParentTab: string;
+  onParentTabChange: (tab: string) => void;
+  childTabs?: string[];
+  activeChildTab?: string;
+  onChildTabChange?: (tab: string) => void;
   className?: string;
 }
 
@@ -34,6 +45,36 @@ export function Tabs({ tabs, activeTab, onTabChange, className }: TabsProps) {
           <span className="relative capitalize">{tab}</span>
         </button>
       ))}
+    </div>
+  );
+}
+
+export function NestedTabs({
+  parentTabs,
+  activeParentTab,
+  onParentTabChange,
+  childTabs,
+  activeChildTab,
+  onChildTabChange,
+  className,
+}: NestedTabsProps) {
+  return (
+    <div className={cn("flex flex-col space-y-2", className)}>
+      <Tabs
+        tabs={parentTabs}
+        activeTab={activeParentTab}
+        onTabChange={onParentTabChange}
+      />
+      {childTabs && activeChildTab && onChildTabChange && (
+        <div className="flex justify-center w-full">
+          <Tabs
+            tabs={childTabs}
+            activeTab={activeChildTab}
+            onTabChange={onChildTabChange}
+            className="w-auto"
+          />
+        </div>
+      )}
     </div>
   );
 } 

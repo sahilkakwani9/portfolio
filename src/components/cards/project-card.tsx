@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 import BlurFade from "@/components/text/blur-fade";
 import { motion } from "framer-motion";
+import { NestedTabs } from "@/components/project-tabs";
 
 interface ProjectLink {
   type: string;
@@ -11,19 +12,29 @@ interface ProjectLink {
   icon: React.ReactNode;
 }
 
+interface Project {
+  id: number;
+  links: readonly ProjectLink[];
+  description: string;
+}
+
 interface ProjectCardProps {
   title: string;
-  links: ProjectLink[];
+  links: readonly ProjectLink[];
   description?: string;
   className?: string;
 }
 
 interface ProjectListProps {
   projects: {
-    title: string;
-    links: ProjectLink[];
-    description?: string;
-  }[];
+    Frontend?: Record<string, Project>;
+    Backend?: Record<string, Project>;
+    "Full Stack"?: Record<string, Project>;
+    "Smart Contracts"?: {
+      Solana?: Record<string, Project>;
+      EVM?: Record<string, Project>;
+    };
+  };
 }
 
 export function ProjectCard({
@@ -86,12 +97,26 @@ export function ProjectCard({
 }
 
 export function ProjectList({ projects }: ProjectListProps) {
+  const [activeParentTab, setActiveParentTab] = React.useState("Frontend");
+  const [activeChildTab, setActiveChildTab] = React.useState<string | null>(null);
   const [expanded, setExpanded] = React.useState<boolean>(false);
   const [isAnimating, setIsAnimating] = React.useState<boolean>(false);
-  
-  const displayedProjects = expanded ? projects : projects.slice(0, 5);
-  const showLoadMore = !expanded && projects.length > 5;
-  
+
+  const parentTabs = Object.keys(projects);
+  const childTabs = activeParentTab === "Smart Contracts" ? ["Solana", "EVM"] : undefined;
+
+  const getCurrentProjects = () => {
+    if (activeParentTab === "Smart Contracts" && activeChildTab) {
+      return projects["Smart Contracts"]?.[activeChildTab as keyof typeof projects["Smart Contracts"]] || {};
+    }
+    return projects[activeParentTab as keyof typeof projects] || {};
+  };
+
+  const currentProjects = getCurrentProjects();
+  const projectEntries = Object.entries(currentProjects);
+  const displayedProjects = expanded ? projectEntries : projectEntries.slice(0, 5);
+  const showLoadMore = !expanded && projectEntries.length > 5;
+
   const handleToggleExpand = (expand: boolean) => {
     setIsAnimating(true);
     setTimeout(() => {
@@ -101,15 +126,29 @@ export function ProjectList({ projects }: ProjectListProps) {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col space-y-4">
+    <div className="flex justify-center">
+      <NestedTabs
+        parentTabs={parentTabs}
+        activeParentTab={activeParentTab}
+        onParentTabChange={(tab) => {
+          setActiveParentTab(tab);
+          setActiveChildTab(tab === "Smart Contracts" ? "Solana" : null);
+        }}
+        childTabs={childTabs}
+        activeChildTab={activeChildTab || undefined}
+        onChildTabChange={setActiveChildTab}
+      />
+      </div>
+
       <BlurFade delay={0.04} className="transition-all duration-500 ease-in-out">
-        {displayedProjects.map((project, index) => (
+        {displayedProjects.map(([title, project], index) => (
           <div 
-            key={`${project.title}-${index}`} 
+            key={`${title}-${index}`} 
             className="transition-all duration-300 ease-in-out transform"
           >
             <ProjectCard
-              title={project.title}
+              title={title}
               links={project.links}
               description={project.description}
               className={index !== 0 ? "border-t border-border/40" : ""}

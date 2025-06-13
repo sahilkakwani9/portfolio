@@ -110,22 +110,22 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
   projects: [
     {
       Frontend: {
-        Hunch: {
+        "Superteam Security Dashboard": {
           id: 1,
           links: [
             {
               type: "Website",
-              href: "https://www.hunchkaro.xyz/",
+              href: "https://st-security.vercel.app/",
               icon: <LinkIcon className="size-9" />,
             },
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/hunch-lens",
+              href: "https://github.com/Not-Sarthak/st-security",
               icon: <GithubIcon className="size-9" />,
             },
           ],
           description:
-            "A social trading platform connecting people who spot viral content early with those who want to profit from it. Create markets for viral posts, trade on insights, and earn from your predictions.",
+            "Superteam Security Dashboard is a one-stop place to read everything about hacks, exploits, and vulnerabilities in the Solana Ecosystem.",
         },
         "Sol UI": {
           id: 2,
@@ -144,25 +144,42 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
           description:
             "A modern UI component library for Solana dApps, featuring customizable components native to Solana Ecosystem.",
         },
-        "Superteam Security Dashboard": {
+        EthMumbai: {
           id: 3,
           links: [
             {
               type: "Website",
-              href: "https://st-security.vercel.app/",
+              href: "https://mumbaieth.vercel.app/",
               icon: <LinkIcon className="size-9" />,
             },
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/st-security",
+              href: "https://github.com/Not-Sarthak/eth-mumbai",
               icon: <GithubIcon className="size-9" />,
             },
           ],
           description:
-            "Superteam Security Dashboard is a one-stop place to read everything about hacks, exploits, and vulnerabilities in the Solana Ecosystem.",
+            "A website for EthMumbai with an SVG logo that changes colors based on user preferences.",
+        },
+        "AO Calculator": {
+          id: 4,
+          links: [
+            {
+              type: "Website",
+              href: "https://ao-unit-converter.ar-io.net/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/ao-unit-converter",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description:
+            "A unit converter for the AO ecosystem, helping developers and users convert between AO and Armstrong.",
         },
         "SendAI Dashboard": {
-          id: 4,
+          id: 5,
           links: [
             {
               type: "Website",
@@ -194,41 +211,41 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
         },
       },
       "Full Stack": {
-        "Lulo Blinks": {
-          id: 2,
+        Hunch: {
+          id: 1,
           links: [
             {
               type: "Website",
-              href: "https://dial.to/developer?url=https://www.investorrr.club/api/donate&cluster=mainnet",
+              href: "https://www.hunchkaro.xyz/",
               icon: <LinkIcon className="size-9" />,
             },
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/lulo-blinks",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-          description: "Solana Blink to deposit funds directly to Lulo",
-        },
-        Ghiblub: {
-          id: 3,
-          links: [
-            {
-              type: "Website",
-              href: "https://ghiblub.vercel.app/",
-              icon: <LinkIcon className="size-9" />,
-            },
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/ghiblub",
+              href: "https://github.com/Not-Sarthak/hunch-lens",
               icon: <GithubIcon className="size-9" />,
             },
           ],
           description:
-            "A community platform for Studio Ghibli fans, that helps them find out how closely they're connected to literally anyone on github.",
+            "A social trading platform connecting people who spot viral content early with those who want to profit from it. Create markets for viral posts, trade on insights, and earn from your predictions.",
+        },
+        Ticker: {
+          id: 2,
+          links: [
+            {
+              type: "Website",
+              href: "https://farcaster.xyz/~/mini-apps/launch?domain=ticker.megabyte0x.xyz",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/ticker",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description: "A Farcaster Mini-App to buy RWA Assets Onchain",
         },
         Vox: {
-          id: 4,
+          id: 3,
           links: [
             {
               type: "Website",
@@ -244,111 +261,164 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
           description:
             "A Ticket-Reselling platform for events, that allows users to buy and sell tickets for events.",
         },
-        "AO Calculator": {
+        Twinn: {
+          id: 4,
+          links: [
+            {
+              type: "Website",
+              href: "https://usetwinn.com/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/Not-Sarthak/twinn",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description:
+            "Bookmark your Life, with Twinn - A zk-compressed digital badge on Solana for every moment you showed up.",
+        },
+        Ghiblub: {
           id: 5,
           links: [
             {
               type: "Website",
-              href: "https://ao-unit-converter.ar-io.net/",
+              href: "https://ghiblub.vercel.app/",
               icon: <LinkIcon className="size-9" />,
             },
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/ao-unit-converter",
+              href: "https://github.com/Not-Sarthak/ghiblub",
               icon: <GithubIcon className="size-9" />,
             },
           ],
           description:
-            "A unit converter for the AO ecosystem, helping developers and users convert between AO and Armstrong.",
+            "A community platform for Studio Ghibli fans, that helps them find out how closely they're connected to literally anyone on github.",
         },
-        EthMumbai: {
+        "Lulo Blinks": {
           id: 6,
           links: [
             {
               type: "Website",
-              href: "https://mumbaieth.vercel.app/",
+              href: "https://dial.to/developer?url=https://www.investorrr.club/api/donate&cluster=mainnet",
               icon: <LinkIcon className="size-9" />,
             },
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/eth-mumbai",
+              href: "https://github.com/Not-Sarthak/lulo-blinks",
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description:
-            "A website for EthMumbai with an SVG logo that changes colors based on user preferences.",
+          description: "Solana Blink to deposit funds directly to Lulo",
         },
       },
       "Smart Contracts": {
-        "Vault Program": {
-          id: 1,
-          description:
-            "Solana Vault Program using Anchor",
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/vault-anchor",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
+        Solana: {
+          "NFT Marketplace Program": {
+            id: 1,
+            description: "NFT Marketplace Program using Anchor",
+            links: [
+              {
+                type: "Source",
+                href: "https://github.com/Not-Sarthak/anchor-nft-marketplace",
+                icon: <GithubIcon className="size-9" />,
+              },
+            ],
+          },
+          "AMM Program": {
+            id: 2,
+            description:
+              "AMM Program using Anchor to understand the Constant Product Curve",
+            links: [
+              {
+                type: "Source",
+                href: "https://github.com/Not-Sarthak/amm-anchor",
+                icon: <GithubIcon className="size-9" />,
+              },
+            ],
+          },
+          "NFT Staking Program": {
+            id: 3,
+            description: "NFT Staking Program using Anchor",
+            links: [
+              {
+                type: "Source",
+                href: "https://github.com/Not-Sarthak/nft-stake-anchor",
+                icon: <GithubIcon className="size-9" />,
+              },
+            ],
+          },
+          "Vault Program": {
+            id: 4,
+            description: "Solana Vault Program using Anchor",
+            links: [
+              {
+                type: "Source",
+                href: "https://github.com/Not-Sarthak/vault-anchor",
+                icon: <GithubIcon className="size-9" />,
+              },
+            ],
+          },
+          "Escrow Program": {
+            id: 5,
+            description: "Solana Escrow Program using Anchor",
+            links: [
+              {
+                type: "Source",
+                href: "https://github.com/Not-Sarthak/escrow-anchor/",
+                icon: <GithubIcon className="size-9" />,
+              },
+            ],
+          },
         },
-        "Escrow Program": {
-          id: 2,
-          description:
-            "Solana Escrow Program using Anchor",
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/escrow-anchor/",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Foundry Stablecoin": {
-          id: 3,
-          description:
-            "This project is meant to be a stablecoin where users can deposit WETH and WBTC in exchange for a token that will be pegged to the USD.",
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/defi-stablecoin",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "Merkle Airdrop": {
-          id: 4,
-          description:
-            "An introduction to the Merkle Airdrop and Signatures project",
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/merkle-airdrop",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "DAO - Foundry": {
-          id: 5,
-          description: "On-chain voting system for DAOs",
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/foundry-dao",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-        },
-        "ERC - 4337 / Foundry": {
-          id: 6,
-          description: "A project to learn Account Abstraction using EIP-4337",
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/foundry-account-abstraction",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
+        EVM: {
+          "Foundry Stablecoin": {
+            id: 1,
+            description:
+              "This project is meant to be a stablecoin where users can deposit WETH and WBTC in exchange for a token that will be pegged to the USD.",
+            links: [
+              {
+                type: "Source",
+                href: "https://github.com/Not-Sarthak/defi-stablecoin",
+                icon: <GithubIcon className="size-9" />,
+              },
+            ],
+          },
+          "Merkle Airdrop": {
+            id: 2,
+            description:
+              "An introduction to the Merkle Airdrop and Signatures project",
+            links: [
+              {
+                type: "Source",
+                href: "https://github.com/Not-Sarthak/merkle-airdrop",
+                icon: <GithubIcon className="size-9" />,
+              },
+            ],
+          },
+          "DAO - Foundry": {
+            id: 3,
+            description: "On-chain voting system for DAOs",
+            links: [
+              {
+                type: "Source",
+                href: "https://github.com/Not-Sarthak/foundry-dao",
+                icon: <GithubIcon className="size-9" />,
+              },
+            ],
+          },
+          "ERC - 4337 / Foundry": {
+            id: 4,
+            description:
+              "A project to learn Account Abstraction using EIP-4337",
+            links: [
+              {
+                type: "Source",
+                href: "https://github.com/Not-Sarthak/foundry-account-abstraction",
+                icon: <GithubIcon className="size-9" />,
+              },
+            ],
+          },
         },
       },
     },

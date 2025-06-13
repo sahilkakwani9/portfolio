@@ -16,15 +16,19 @@ interface ProjectLink {
   icon: React.ReactNode;
 }
 
-interface ProjectData {
+interface Project {
   id: number;
-  links: ProjectLink[];
-  description?: string;
+  links: readonly ProjectLink[];
+  description: string;
 }
 
 type ProjectsData = {
-  [key: string]: {
-    [key: string]: ProjectData;
+  Frontend?: Record<string, Project>;
+  Backend?: Record<string, Project>;
+  "Full Stack"?: Record<string, Project>;
+  "Smart Contracts"?: {
+    Solana?: Record<string, Project>;
+    EVM?: Record<string, Project>;
   };
 };
 
@@ -32,22 +36,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   const getAllProjects = () => {
-    const projects = DATA.projects[0] as unknown as ProjectsData;
-    const allProjects = [];
-    
-    for (const category in projects) {
-      const categoryProjects = projects[category];
-      for (const projectName in categoryProjects) {
-        const projectData = categoryProjects[projectName];
-        allProjects.push({
-          title: projectName,
-          links: projectData.links || [],
-          description: projectData.description,
-        });
-      }
-    }
-    
-    return allProjects;
+    return DATA.projects[0] as unknown as ProjectsData;
   };
 
   const getAllWork = () => {
