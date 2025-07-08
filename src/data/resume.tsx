@@ -130,6 +130,19 @@ I'm a full-stack and mobile developer passionate about building trustless system
           description:
             "Stello is the only cross-chain wallet that pays back your gas",
         },
+
+        "Carbonpay": {
+          id: 3,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/ArcticProtocol/CarbonPay",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description:
+            "Carbonpay is the most eco-friendly wallet on solana",
+        },
         "Timelines": {
           id: 3,
           links: [
@@ -166,6 +179,7 @@ I'm a full-stack and mobile developer passionate about building trustless system
           description:
             "Brought the Bungee.exchange experience on mobile",
         },
+
 
       },
       Frontend: {
@@ -364,15 +378,11 @@ I'm a full-stack and mobile developer passionate about building trustless system
     },
   ],
   wins: {
-    "Superteam Security Dashboard - 1st Place": {
+    "Base Batches - First place in AI Track": {
       link: "",
       type: "hackathon",
     },
-    "Fellow @Wormhole India": {
-      link: "",
-      type: "title",
-    },
-    "Based Builder of the Year '24": {
+    "Part of Base Fellowship 2.0": {
       link: "",
       type: "title",
     },
@@ -380,63 +390,23 @@ I'm a full-stack and mobile developer passionate about building trustless system
       link: "",
       type: "title",
     },
-    "Player @callusfbi": {
+    "Member @DeveloperDao": {
       link: "",
       type: "title",
     },
-    "ETHIndia '24 - Bounty Winner": {
+    "Solana Hyperdrive - Climate Prize Winner": {
       link: "",
       type: "hackathon",
     },
-    "Onchain AI Fellowship - by @callusfbi - Selected": {
+    "EthOnline '24 - Bounty Winner": {
       link: "",
       type: "hackathon",
     },
-    "EthBangkok '24 - Bounty Winner": {
+    "Phala phat contracts hackathon - 1st place": {
       link: "",
       type: "hackathon",
     },
-    "Encode Club BTC Hackathon - 2nd Place": {
-      link: "",
-      type: "hackathon",
-    },
-    "Funding the Commons '24 Bangkok - Bounty Winner": {
-      link: "",
-      type: "hackathon",
-    },
-    "Based India '24 - Winner List": {
-      link: "",
-      type: "hackathon",
-    },
-    "Colosseum Radar Hackathon - 2x Bounties": {
-      link: "",
-      type: "hackathon",
-    },
-    "100xDevs Hackathon - Bounty": {
-      link: "",
-      type: "hackathon",
-    },
-    "Stellar Builders' Residency - 1st Place": {
-      link: "",
-      type: "hackathon",
-    },
-    "Stellar IndiaThon '24 - Infra Track": {
-      link: "",
-      type: "hackathon",
-    },
-    "NuvYuva Tinkerthon '24 - 2nd Place": {
-      link: "",
-      type: "hackathon",
-    },
-    "ITMBU Hackathon '24 - 2nd Place": {
-      link: "",
-      type: "hackathon",
-    },
-    "HackTheLeague '24 - 2x Bounties": {
-      link: "",
-      type: "hackathon",
-    },
-    "Arweave HackerHouse '1 - Runner Up": {
+    "EthIndia '23 - Bounty Winner": {
       link: "",
       type: "hackathon",
     },

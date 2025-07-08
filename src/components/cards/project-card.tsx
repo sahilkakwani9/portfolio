@@ -94,7 +94,7 @@ export function ProjectCard({
 }
 
 export function ProjectList({ projects }: ProjectListProps) {
-  const [activeParentTab, setActiveParentTab] = React.useState("Frontend");
+  const [activeParentTab, setActiveParentTab] = React.useState("Mobile");
   const [activeChildTab, setActiveChildTab] = React.useState<string | null>(null);
   const [expanded, setExpanded] = React.useState<boolean>(false);
   const [isAnimating, setIsAnimating] = React.useState<boolean>(false);
