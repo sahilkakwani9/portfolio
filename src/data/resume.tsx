@@ -58,48 +58,58 @@ I'm a full-stack and mobile developer passionate about building trustless system
   },
   work: [
     {
-      company: "Gasyard",
-      href: "https://gasyard.fi/",
+      company: "Creatorbase",
+      href: "https://creatorbase.pro/",
       location: "Remote",
-      title: "Full Stack Developer",
-      logoUrl: "/work/gasyard.png",
-      start: "January 2025",
-      end: "May 2025",
+      title: "Co-Builder",
+      logoUrl: "/work/creatorbase.png",
+      start: "May 2025",
+      end: "currently working",
       description:
-        "Built backend with Fastify, Docker, and PostgreSQL that handled $570K in transaction volume and processed 120K requests. Implemented cross-chain bridge routes for Hyperliquid, Movement, Monad (Testnet), and other EVM/Non-EVM integrations in Testnet and Mainnet environments. Created Gasyard Bridge Explorer using Next.js, TypeScript, Tanstack Query, Zustand, and Tailwind CSS for transaction tracking. Developed Fuelbae Agent tool for executing DeFi actions across protocols.",
+        "Built the backend using Express.js, leveraging APIs to automate and run scheduled tasks across multiple social platforms. Developed the frontend with Next.js, TypeScript, Tanstack Query, Zustand, and Tailwind CSS, ensuring robust data fetching, state management, and a seamless user experience. Integrated analytics using Datafast to monitor and optimize platform performance.",
     },
     {
-      company: "0rbit",
-      href: "https://www.0rbit.co/",
+      company: "Cleo",
+      href: "",
       location: "Remote",
-      title: "Full Stack Developer",
-      logoUrl: "/work/0rbit.jpg",
-      start: "March 2024",
+      title: "Freelance Mobile Dev",
+      logoUrl: "/work/cleo.png",
+      start: "Nov 2024",
+      end: "currently working",
+      description:
+        "Designed and developed a Self-Sovereign Identity wallet app, enabling users to generate and verify zero-knowledge proofs seamlessly. Integrated WebAssembly directly into the app, eliminating the need for web views and reducing processing overhead by 25%. Improved circuit download and storage efficiency, reducing download times by 40%.",
+    },
+    {
+      company: "Stello",
+      href: "",
+      location: "Remote",
+      title: "Full Stack Dev",
+      logoUrl: "/work/stello.png",
+      start: "Oct, 2024",
+      end: "Feb. 2024",
+      description:
+        "Developed a robust, production-ready multi-chain wallet supporting Ethereum, Bitcoin, Solana, and Tron, ensuring seamless cross-chain functionality. Designed and implemented intricate animations for the main website, enhancing user engagement and visual appeal. Integrated advanced features such as token swaps, cross-chain bridging, and browsing, providing a comprehensive and intuitive in-app user experience.",
+    },
+    {
+      company: "Saganize",
+      href: "",
+      location: "Remote",
+      title: "Freelance React-Native Dev(SDK)",
+      logoUrl: "/work/saganize.png",
+      start: "December 2023",
+      end: "Feb 2024",
+      description:
+        "Developed and integrated a cross-platform SDK enabling seamless in-app Solana transactions. Implemented user interfaces and integrated a webview for secure transaction handling. Created comprehensive tests to ensure robust error handling and edge case coverage.",
+    }, {
+      company: "Lensplay",
+      href: "",
+      location: "Remote",
+      title: "Co-Founder",
+      logoUrl: "/work/lensplay.jpg",
+      start: "Jan 2023",
       end: "December 2024",
       description:
-        "Developed multiple smart contracts in Lua for the AO Ecosystem, while battle-testing 0rbit's core infrastructure and contributing to the core node. I also integrated frontend tutorials using AOConnect, showcasing 0rbit's capabilities in blog posts. Beyond code, I enhanced the documentation, converted Figma designs into functional UI components, and contributed to the website development. Additionally, I handled social media content and authored blogs and technical documentation, ensuring a better developer experience.",
-    },
-    {
-      company: "Pyano (now Bytebell AI)",
-      href: "",
-      location: "Remote",
-      title: "Software Developer Intern (Part-Time)",
-      logoUrl: "/work/bytebell.png",
-      start: "May 2024",
-      end: "June 2024",
-      description:
-        "Developed a complete desktop application using Electron.js, integrating multiple LLM API endpoints into the frontend. Successfully deployed the stable release through Amazon S3 and GitHub Releases, ensuring seamless access for users.",
-    },
-    {
-      company: "D2Clytics",
-      href: "",
-      location: "Remote",
-      title: "Frontend Developer Intern",
-      logoUrl: "/work/d2clytics.jpg",
-      start: "January 2024",
-      end: "April 2024",
-      description:
-        "Developed over 35 charts using various libraries with React.js and TailwindCSS. I led the end-to-end state management process and converted more than 30 pages Figma design into functional code.",
+        "Created a complete application featuring a user-based feed, explore, profile, real-time notifications, and the ability to collect videos as NFTs and mirror videos. Developed an indexer to store on-chain activities in a database for notifications, and built a video player with gesture support. Achieved 10k+ registrations on the waitlist, 300+ downloads within 36 hours, and over 1k total downloads.",
     },
   ],
   openSource: [],
@@ -413,19 +423,80 @@ I'm a full-stack and mobile developer passionate about building trustless system
   },
   books: [
     {
-      title: "Think and Grow Rich - Napoleon Hill",
+      title: "Rich Dad Poor Dad - Robert Kiyosaki",
+      currentlyReading: false,
     },
     {
-      title: "Before you Start Up - Pankaj Goyal",
+      title: "Think and Grow Rich - Napoleon Hill",
+      currentlyReading: false,
     },
     {
       title: "Zero to One - Peter Thiel",
+      currentlyReading: false,
+    },
+    {
+      title: "My experiments with truth - Mahatma Gandhi",
+      currentlyReading: false,
+    },
+    {
+      title: "Elon Musk - Ashlee Vance",
+      currentlyReading: false,
     },
     {
       title: "The 5 AM Club - Robin Sharma",
+      currentlyReading: false,
     },
     {
-      title: "The Network State - Balaji Srinivasan",
+      title: "12 Rules for life - Jordan Peterson",
+      currentlyReading: false,
+    },
+    {
+      title: "The almanack of naval ravikant - Eric Jorgensen",
+      currentlyReading: false,
+    },
+    {
+      title: "Start with Why - Simon Sinek",
+      currentlyReading: false,
+    },
+    {
+      title: "Wings of fire - APJ Abdul Kalam",
+      currentlyReading: false,
+    },
+    {
+      title: "How Deepak Parekh Grew HDFC Group Exponentially - R. Gopalakrishnan",
+      currentlyReading: false,
+    },
+    {
+      title: "Tuesdays with morrie - Mitch Albom",
+      currentlyReading: false,
+    },
+    {
+      title: "The Alchemist - Paulo Coelho",
+      currentlyReading: false,
+    },
+    {
+      title: "The Anthology of Balaji - Eric Jorgensen",
+      currentlyReading: false,
+    },
+    {
+      title: "Beyond the Last Blue Mountains - RM Lala",
+      currentlyReading: false,
+    },
+    {
+      title: "Celebration of the Cells - RM Lala",
+      currentlyReading: false,
+    },
+    {
+      title: "The Daily Stoic - Ryan Holiday",
+      currentlyReading: true,
+    },
+    {
+      title: "The Disruptors - Alan Axelrod",
+      currentlyReading: true,
+    },
+    {
+      title: "Amrita Imroz - Uma Trilok",
+      currentlyReading: true,
     },
   ],
 } as const;
