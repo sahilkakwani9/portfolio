@@ -446,6 +446,10 @@ I'm a full-stack and mobile developer passionate about building trustless system
       currentlyReading: false,
     },
     {
+      title: "Atomic Habits - James Clear",
+      currentlyReading: false,
+    },
+    {
       title: "The almanack of naval ravikant - Eric Jorgensen",
       currentlyReading: false,
     },
