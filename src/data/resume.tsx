@@ -30,7 +30,7 @@ I'm a full-stack and mobile developer passionate about building trustless system
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/sahilkakwani9",
+        url: "https://www.linkedin.com/in/sahil-kakwani/",
         icon: Icons.linkedin,
 
         navbar: true,
@@ -253,12 +253,7 @@ I'm a full-stack and mobile developer passionate about building trustless system
               type: "Website",
               href: "https://valentine.agixbt.com/",
               icon: <LinkIcon className="size-9" />,
-            },
-            // {
-            //   type: "Source",
-            //   href: "https://github.com/Not-Sarthak/hunch-lens",
-            //   icon: <GithubIcon className="size-9" />,
-            // },
+          },
           ],
           description:
             "Connect with an AI companion who's always there to share moments of joy and understanding. A part of AGIXBT corp.",
