@@ -4,16 +4,12 @@ import { GithubIcon } from "../../public/icons/github";
 import { LinkIcon } from "../../public/icons/link";
 
 export const DATA = {
-  name: "Sarthak Shah",
-  initials: "SS",
-  url: "https://www.0xsarthak.xyz/",
+  name: "Sahil Kakwani",
+  initials: "SK",
+  url: "https://www.sahilkakwani9.me/",
   description: "I Code.",
   summary: `
-I'm a full-stack developer with an experience of working with various languages and blockchains.
-
-Previously, I've interned at 3x early-stage startups and have won 20x hackathons🏆. I enjoy contributing to open source projects. I'm also a member at SuperteamIn (@superteamIn) & FBI (@callusfbi).
-
-Beyond code, I'm passionate about cinematography and am stepping out of my comfort zone to create both technical and non-technical content. I'm a sneakerhead, love traveling, and enjoy endless talks on finance. Also, I play chess.
+I'm a full-stack and mobile developer passionate about building trustless systems that matter. With hands-on experience across EVM and SVM chains, I've shipped numerous mobile and fullstack projects, and written smart contracts that have processed over 50k+ transactions. My journey includes launching my own products, learning from every flop, and being an active member of SuperteamIn and Developer DAO. When I'm not coding, you'll find me grinding hackathons, ideating the next big thing, or lost in a good book.
 `,
   avatarUrl: "/me.jpg",
   navbar: [
@@ -23,25 +19,25 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
     { href: "/bookshelf", icon: Book, label: "Bookshelf" },
   ],
   contact: {
-    email: "notsarthakshah@gmail.com",
+    email: "sahkakwani@gmail.com",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/Not-Sarthak/",
+        url: "https://github.com/sahilkakwani9/",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/sarthak-shah-49267b224/",
+        url: "https://www.linkedin.com/in/sahilkakwani9",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://x.com/0xSarthak13",
+        url: "https://x.com/somewhatsahil",
         icon: Icons.x,
 
         navbar: true,
@@ -109,316 +105,260 @@ Beyond code, I'm passionate about cinematography and am stepping out of my comfo
   openSource: [],
   projects: [
     {
-      Frontend: {
-        "Superteam Security Dashboard": {
+      Mobile: {
+        "Lensplay": {
           id: 1,
           links: [
             {
-              type: "Website",
-              href: "https://st-security.vercel.app/",
-              icon: <LinkIcon className="size-9" />,
-            },
-            {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/st-security",
+              href: "https://github.com/VIVEK-SUTHAR/LensPlay",
               icon: <GithubIcon className="size-9" />,
             },
           ],
           description:
-            "Superteam Security Dashboard is a one-stop place to read everything about hacks, exploits, and vulnerabilities in the Solana Ecosystem.",
+            "LensPlay is a decentralized mobile-first video-sharing application built on top of Lens Protocol.",
         },
-        "Sol UI": {
+        "Stello": {
           id: 2,
           links: [
             {
               type: "Website",
-              href: "https://sol-ui.vercel.app/",
+              href: "https://stello-personal.vercel.app/",
               icon: <LinkIcon className="size-9" />,
             },
+          ],
+          description:
+            "Stello is the only cross-chain wallet that pays back your gas",
+        },
+        "Timelines": {
+          id: 3,
+          links: [
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/sol-ui",
+              href: "https://github.com/sahilkakwani9/timelinesxyz",
               icon: <GithubIcon className="size-9" />,
             },
           ],
           description:
-            "A modern UI component library for Solana dApps, featuring customizable components native to Solana Ecosystem.",
+            "With Timelines We tokenize each post through an algorithmic bonding curve. Early users earn by spending their time discovering and financially signaling valuable content for others",
         },
-        EthMumbai: {
+        "Solwave: React Native SDK": {
+          id: 4,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/Saganize/Solwave-native",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description:
+            "Solwave enables in-app transactions for Solana mobile dApps, allowing developers to implement in-app transactions within their mobile applications without having to build an independent wallet for their users.",
+        },
+        "BungeeOnMob": {
+          id: 5,
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/sahilkakwani9/Bungee-On-Mob",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description:
+            "Brought the Bungee.exchange experience on mobile",
+        },
+
+      },
+      Frontend: {
+        "Stello": {
+          id: 1,
+          links: [
+            {
+              type: "Website",
+              href: "https://stello-personal.vercel.app/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/sahilkakwani9/stello-personal",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description:
+            "Stello is the only cross-chain wallet that pays back your gas",
+        },
+        "Eclipse: Solana App Day": {
+          id: 2,
+          links: [
+            {
+              type: "Website",
+              href: "https://solana-app-day.vercel.app/",
+              icon: <LinkIcon className="size-9" />,
+            },
+            {
+              type: "Source",
+              href: "https://github.com/sahilkakwani9/solana-app-day",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+          description:
+            "A website for Solana App Day which is basically a distributed voting dapp on eclipse.",
+        },
+        "YUZU": {
           id: 3,
           links: [
             {
               type: "Website",
-              href: "https://mumbaieth.vercel.app/",
+              href: "https://www.yuzu.game/",
               icon: <LinkIcon className="size-9" />,
             },
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/eth-mumbai",
+              href: "https://github.com/sahilkakwani9/yuzu",
               icon: <GithubIcon className="size-9" />,
             },
           ],
           description:
-            "A website for EthMumbai with an SVG logo that changes colors based on user preferences.",
-        },
-        "AO Calculator": {
-          id: 4,
-          links: [
-            {
-              type: "Website",
-              href: "https://ao-unit-converter.ar-io.net/",
-              icon: <LinkIcon className="size-9" />,
-            },
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/ao-unit-converter",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-          description:
-            "A unit converter for the AO ecosystem, helping developers and users convert between AO and Armstrong.",
-        },
-        "SendAI Dashboard": {
-          id: 5,
-          links: [
-            {
-              type: "Website",
-              href: "https://sendai-dashboard.vercel.app/",
-              icon: <LinkIcon className="size-9" />,
-            },
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/sendai-dashboard",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-          description:
-            "A comprehensive dashboard for SendAI, providing analytics and insights for projects built during Send AI Hackathon.",
-        },
-      },
-      Backend: {
-        Curators: {
-          id: 1,
-          links: [
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/curators",
-              icon: <GithubIcon className="size-9" />,
-            },
-          ],
-          description:
-            "Curators Backend automates the process of identifying high-performing Liquid Staking Tokens (LSTs) on Solana and facilitates automatic swapping to optimize yield.",
+            "YUZU is an open marketplace and launchpad for AI Gaming Models & Agents",
         },
       },
       "Full Stack": {
-        Hunch: {
+        ValentineXBT: {
           id: 1,
           links: [
             {
               type: "Website",
-              href: "https://www.hunchkaro.xyz/",
+              href: "https://valentine.agixbt.com/",
               icon: <LinkIcon className="size-9" />,
             },
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/hunch-lens",
-              icon: <GithubIcon className="size-9" />,
-            },
+            // {
+            //   type: "Source",
+            //   href: "https://github.com/Not-Sarthak/hunch-lens",
+            //   icon: <GithubIcon className="size-9" />,
+            // },
           ],
           description:
-            "A social trading platform connecting people who spot viral content early with those who want to profit from it. Create markets for viral posts, trade on insights, and earn from your predictions.",
+            "Connect with an AI companion who's always there to share moments of joy and understanding. A part of AGIXBT corp.",
         },
-        Ticker: {
+        "Make My Feed": {
           id: 2,
           links: [
             {
               type: "Website",
-              href: "https://farcaster.xyz/~/mini-apps/launch?domain=ticker.megabyte0x.xyz",
+              href: "https://www.makemyfeed.com/",
               icon: <LinkIcon className="size-9" />,
             },
-            {
-              type: "Source",
-              href: "https://github.com/Not-Sarthak/ticker",
-              icon: <GithubIcon className="size-9" />,
-            },
+            // {
+            //   type: "Source",
+            //   href: "",
+            //   icon: <GithubIcon className="size-9" />,
+            // },
           ],
-          description: "A Farcaster Mini-App to buy RWA Assets Onchain",
+          description:
+            "Make my feed helps you plan your feed better with ai",
         },
-        Vox: {
+        "Blinks Studio": {
           id: 3,
           links: [
             {
               type: "Website",
-              href: "https://voxnow.xyz/",
+              href: "https://blinks-pg-five.vercel.app/",
               icon: <LinkIcon className="size-9" />,
             },
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/vox",
+              href: "https://github.com/sahilkakwani9/BlinksPg",
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description:
-            "A Ticket-Reselling platform for events, that allows users to buy and sell tickets for events.",
+          description: "Create and deploy Solana Actions (blinks) with our intuitive drag-and-drop interface. Build DeFi integrations, token swaps, and more without coding knowledge.",
         },
-        Twinn: {
+        "Yeet that txn": {
           id: 4,
           links: [
             {
               type: "Website",
-              href: "https://usetwinn.com/",
+              href: "https://yeet-that-txn.vercel.app/",
               icon: <LinkIcon className="size-9" />,
             },
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/twinn",
+              href: "https://github.com/sahilkakwani9/YeetThatTxn/",
               icon: <GithubIcon className="size-9" />,
             },
           ],
           description:
-            "Bookmark your Life, with Twinn - A zk-compressed digital badge on Solana for every moment you showed up.",
+            "YeetThatTx is a web-based tool that allows users to deserialize and send Solana transactions easily. It supports both versioned and legacy transactions, as well as message deserialization.",
         },
-        Ghiblub: {
+        Connector: {
           id: 5,
           links: [
             {
               type: "Website",
-              href: "https://ghiblub.vercel.app/",
+              href: "https://connector-9f4i.vercel.app/",
               icon: <LinkIcon className="size-9" />,
             },
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/ghiblub",
+              href: "https://github.com/sahilkakwani9/connector",
               icon: <GithubIcon className="size-9" />,
             },
           ],
           description:
-            "A community platform for Studio Ghibli fans, that helps them find out how closely they're connected to literally anyone on github.",
+            "Connector is built to break down the limitations of isolated blockchains. We provide a simple and efficient way for users to manage their digital assets and execute leverage strategies, unlocking yield potential across chains like Arbitrum, Base, and beyond.",
         },
-        "Lulo Blinks": {
-          id: 6,
+      },
+      "SVM Programs": {
+
+        "Mines": {
+          id: 1,
+          description: "Mines is an onchain version of the legendary mines game deployed on eclipse",
           links: [
             {
               type: "Website",
-              href: "https://dial.to/developer?url=https://www.investorrr.club/api/donate&cluster=mainnet",
+              href: "https://mines-rosy.vercel.app/",
               icon: <LinkIcon className="size-9" />,
             },
             {
               type: "Source",
-              href: "https://github.com/Not-Sarthak/lulo-blinks",
+              href: "https://gist.github.com/sahilkakwani9/c507617f0c7c0d867799b6944937cd4f",
               icon: <GithubIcon className="size-9" />,
             },
           ],
-          description: "Solana Blink to deposit funds directly to Lulo",
         },
-      },
-      "Smart Contracts": {
-        Solana: {
-          "NFT Marketplace Program": {
-            id: 1,
-            description: "NFT Marketplace Program using Anchor",
-            links: [
-              {
-                type: "Source",
-                href: "https://github.com/Not-Sarthak/anchor-nft-marketplace",
-                icon: <GithubIcon className="size-9" />,
-              },
-            ],
-          },
-          "AMM Program": {
-            id: 2,
-            description:
-              "AMM Program using Anchor to understand the Constant Product Curve",
-            links: [
-              {
-                type: "Source",
-                href: "https://github.com/Not-Sarthak/amm-anchor",
-                icon: <GithubIcon className="size-9" />,
-              },
-            ],
-          },
-          "NFT Staking Program": {
-            id: 3,
-            description: "NFT Staking Program using Anchor",
-            links: [
-              {
-                type: "Source",
-                href: "https://github.com/Not-Sarthak/nft-stake-anchor",
-                icon: <GithubIcon className="size-9" />,
-              },
-            ],
-          },
-          "Vault Program": {
-            id: 4,
-            description: "Solana Vault Program using Anchor",
-            links: [
-              {
-                type: "Source",
-                href: "https://github.com/Not-Sarthak/vault-anchor",
-                icon: <GithubIcon className="size-9" />,
-              },
-            ],
-          },
-          "Escrow Program": {
-            id: 5,
-            description: "Solana Escrow Program using Anchor",
-            links: [
-              {
-                type: "Source",
-                href: "https://github.com/Not-Sarthak/escrow-anchor/",
-                icon: <GithubIcon className="size-9" />,
-              },
-            ],
-          },
+        "Rollitup": {
+          id: 2,
+          description:
+            "Rollitup is a onchain dice rolling game deployed on eclipse",
+          links: [
+            {
+              type: "Source",
+              href: "https://gist.github.com/sahilkakwani9/377c57e886b075841366aec8462b0f22",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
         },
-        EVM: {
-          "Foundry Stablecoin": {
-            id: 1,
-            description:
-              "This project is meant to be a stablecoin where users can deposit WETH and WBTC in exchange for a token that will be pegged to the USD.",
-            links: [
-              {
-                type: "Source",
-                href: "https://github.com/Not-Sarthak/defi-stablecoin",
-                icon: <GithubIcon className="size-9" />,
-              },
-            ],
-          },
-          "Merkle Airdrop": {
-            id: 2,
-            description:
-              "An introduction to the Merkle Airdrop and Signatures project",
-            links: [
-              {
-                type: "Source",
-                href: "https://github.com/Not-Sarthak/merkle-airdrop",
-                icon: <GithubIcon className="size-9" />,
-              },
-            ],
-          },
-          "DAO - Foundry": {
-            id: 3,
-            description: "On-chain voting system for DAOs",
-            links: [
-              {
-                type: "Source",
-                href: "https://github.com/Not-Sarthak/foundry-dao",
-                icon: <GithubIcon className="size-9" />,
-              },
-            ],
-          },
-          "ERC - 4337 / Foundry": {
-            id: 4,
-            description:
-              "A project to learn Account Abstraction using EIP-4337",
-            links: [
-              {
-                type: "Source",
-                href: "https://github.com/Not-Sarthak/foundry-account-abstraction",
-                icon: <GithubIcon className="size-9" />,
-              },
-            ],
-          },
+        "Timelines": {
+          id: 3,
+          description: "With Timelines We tokenize each post through an algorithmic bonding curve. Early users earn by spending their time discovering and financially signaling valuable content for others",
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/sahilkakwani9/timeline-anchor",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+        },
+        "SPL Transfer Program": {
+          id: 3,
+          description: "A program that can facilitate transfer of SPL token from and to the program",
+          links: [
+            {
+              type: "Source",
+              href: "https://github.com/sahilkakwani9/sample-spl-transfer-anchor/blob/main/lib.rs",
+              icon: <GithubIcon className="size-9" />,
+            },
+          ],
+
         },
       },
     },

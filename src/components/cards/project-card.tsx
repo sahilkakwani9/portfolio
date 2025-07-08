@@ -30,10 +30,7 @@ interface ProjectListProps {
     Frontend?: Record<string, Project>;
     Backend?: Record<string, Project>;
     "Full Stack"?: Record<string, Project>;
-    "Smart Contracts"?: {
-      Solana?: Record<string, Project>;
-      EVM?: Record<string, Project>;
-    };
+    "SVM Programs"?: Record<string, Project>
   };
 }
 
@@ -52,7 +49,7 @@ export function ProjectCard({
         <div className="flex items-center">
           {links.map((link, index) => (
             <React.Fragment key={link.type}>
-              <Link 
+              <Link
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -103,12 +100,9 @@ export function ProjectList({ projects }: ProjectListProps) {
   const [isAnimating, setIsAnimating] = React.useState<boolean>(false);
 
   const parentTabs = Object.keys(projects);
-  const childTabs = activeParentTab === "Smart Contracts" ? ["Solana", "EVM"] : undefined;
+  // const childTabs = activeParentTab === "Smart Contracts" ? ["Solana", "EVM"] : undefined;
 
   const getCurrentProjects = () => {
-    if (activeParentTab === "Smart Contracts" && activeChildTab) {
-      return projects["Smart Contracts"]?.[activeChildTab as keyof typeof projects["Smart Contracts"]] || {};
-    }
     return projects[activeParentTab as keyof typeof projects] || {};
   };
 
@@ -127,24 +121,24 @@ export function ProjectList({ projects }: ProjectListProps) {
 
   return (
     <div className="flex flex-col space-y-4">
-    <div className="flex justify-center">
-      <NestedTabs
-        parentTabs={parentTabs}
-        activeParentTab={activeParentTab}
-        onParentTabChange={(tab) => {
-          setActiveParentTab(tab);
-          setActiveChildTab(tab === "Smart Contracts" ? "Solana" : null);
-        }}
-        childTabs={childTabs}
-        activeChildTab={activeChildTab || undefined}
-        onChildTabChange={setActiveChildTab}
-      />
+      <div className="flex justify-center">
+        <NestedTabs
+          parentTabs={parentTabs}
+          activeParentTab={activeParentTab}
+          onParentTabChange={(tab) => {
+            setActiveParentTab(tab);
+            // setActiveChildTab(tab === "Smart Contracts" ? "Solana" : null);
+          }}
+          // childTabs={childTabs}
+          activeChildTab={activeChildTab || undefined}
+          onChildTabChange={setActiveChildTab}
+        />
       </div>
 
       <BlurFade delay={0.04} className="transition-all duration-500 ease-in-out">
         {displayedProjects.map(([title, project], index) => (
-          <div 
-            key={`${title}-${index}`} 
+          <div
+            key={`${title}-${index}`}
             className="transition-all duration-300 ease-in-out transform"
           >
             <ProjectCard
@@ -156,7 +150,7 @@ export function ProjectList({ projects }: ProjectListProps) {
           </div>
         ))}
       </BlurFade>
-      
+
       <div className="flex relative justify-center mt-4 gap-4">
         {showLoadMore && (
           <BlurFade delay={0.04}>
@@ -169,7 +163,7 @@ export function ProjectList({ projects }: ProjectListProps) {
             </button>
           </BlurFade>
         )}
-        
+
         {expanded && (
           <BlurFade delay={0.04}>
             <button
