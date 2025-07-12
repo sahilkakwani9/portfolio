@@ -253,7 +253,7 @@ I'm a full-stack and mobile developer passionate about building trustless system
               type: "Website",
               href: "https://valentine.agixbt.com/",
               icon: <LinkIcon className="size-9" />,
-          },
+            },
           ],
           description:
             "Connect with an AI companion who's always there to share moments of joy and understanding. A part of AGIXBT corp.",
@@ -495,6 +495,10 @@ I'm a full-stack and mobile developer passionate about building trustless system
     },
     {
       title: "Amrita Imroz - Uma Trilok",
+      currentlyReading: false,
+    },
+    {
+      title: "India's Railway Man - A biography of E. Sreedharan by Rajendra Aklekar",
       currentlyReading: true,
     },
   ],
