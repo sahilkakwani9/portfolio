@@ -482,6 +482,10 @@ I'm a full-stack and mobile developer passionate about building trustless system
       currentlyReading: false,
     },
     {
+      title: "Who moved my cheese - Dr. Spencer Johnson",
+      currentlyReading: false,
+    },
+    {
       title: "Celebration of the Cells - RM Lala",
       currentlyReading: false,
     },
@@ -491,7 +495,8 @@ I'm a full-stack and mobile developer passionate about building trustless system
     },
     {
       title: "The Disruptors - Alan Axelrod",
-      currentlyReading: true,
+      currentlyReading: false,
+      dropped: true,
     },
     {
       title: "Amrita Imroz - Uma Trilok",
@@ -499,6 +504,10 @@ I'm a full-stack and mobile developer passionate about building trustless system
     },
     {
       title: "India's Railway Man - A biography of E. Sreedharan by Rajendra Aklekar",
+      currentlyReading: false,
+    },
+    {
+      title: "Mans search for meaning - Viktor E. Frankl",
       currentlyReading: true,
     },
   ],
