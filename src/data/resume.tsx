@@ -383,6 +383,10 @@ I'm a full-stack and mobile developer passionate about building trustless system
     },
   ],
   wins: {
+    "Incubase by Base - Third prize": {
+      link: "",
+      type: "accelerator",
+    },
     "Base Batches - First place in AI Track": {
       link: "",
       type: "hackathon",
@@ -508,6 +512,10 @@ I'm a full-stack and mobile developer passionate about building trustless system
     },
     {
       title: "Mans search for meaning - Viktor E. Frankl",
+      currentlyReading: false,
+    },
+    {
+      title: "Bitcoin Billionaires - Ben Mezrich",
       currentlyReading: true,
     },
   ],

@@ -17,17 +17,16 @@ const hasProperty = <T extends object, K extends string>(obj: T, prop: K): obj i
 
 export default function WinsPage() {
   const [activeTab, setActiveTab] = useState<AchievementType>('hackathon');
-  
-  const achievementTabs = ['hackathon', 'title', 'speaker'];
-  
+
+  const achievementTabs = ['hackathon', 'title', 'speaker', 'accelerator'];
+
   const filteredAchievements = useMemo(() => {
     return Object.entries(DATA.wins).filter(([_, data]) => {
       if (!hasProperty(data, 'type')) return false;
-      
+
       const type = data.type as string;
-      const mappedType = type === 'role' || type === 'recognition' ? 'title' : type;
-      
-      return mappedType === activeTab;
+
+      return achievementTabs.includes(type);
     });
   }, [activeTab]);
 
