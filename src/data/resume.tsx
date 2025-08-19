@@ -516,6 +516,13 @@ I'm a full-stack and mobile developer passionate about building trustless system
     },
     {
       title: "Bitcoin Billionaires - Ben Mezrich",
+      currentlyReading: false,
+    },
+    {
+      title: "Khaton ka safarnama - Amrita Pritam",
+      currentlyReading: true,
+    }, {
+      title: "The book of clarity - Paras Chopra",
       currentlyReading: true,
     },
   ],
